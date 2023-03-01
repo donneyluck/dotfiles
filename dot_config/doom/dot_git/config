@@ -1,0 +1,37 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[submodule]
+	active = .
+[remote "origin"]
+	url = https://github.com/donneyluck/emacs-config.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[submodule "LaTeX-auto-activiating-snippets"]
+	url = https://github.com/tecosaur/LaTeX-auto-activating-snippets.git
+[submodule "authinfo-color-mode"]
+	url = https://github.com/tecosaur/authinfo-color-mode.git
+[submodule "emacs-everywhere"]
+	url = https://github.com/tecosaur/emacs-everywhere.git
+[submodule "engrave-faces"]
+	url = https://github.com/tecosaur/engrave-faces.git
+[submodule "Lexic"]
+	url = https://github.com/tecosaur/sdcv.git
+[submodule "ob-julia"]
+	url = https://github.com/nico202/ob-julia.git
+[submodule "org-music"]
+	url = https://github.com/tecosaur/org-music.git
+[submodule "org-pandoc-import"]
+	url = https://github.com/tecosaur/org-pandoc-import.git
+[submodule "orgdiff"]
+	url = https://github.com/tecosaur/orgdiff.git
+[submodule "ox-chameleon"]
+	url = https://github.com/tecosaur/ox-chameleon.git
+[submodule "pdftotext"]
+	url = https://github.com/tecosaur/pdftotext.el.git
+[pull]
+	rebase = false
