@@ -1,0 +1,17 @@
+2022-10-18 15:30:02 - [clash]: level=error msg="External controller listen error: listen tcp 127.0.0.1:9090: bind: address already in use"
+2022-10-18 15:30:02 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): connection closed before message completed`
+2022-10-18 15:30:02 - [clash]: level=info msg="Mixed(http+socks) proxy listening at: [::]:7890"
+2022-10-18 15:30:02 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-18 15:30:03 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-18 15:30:03 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-18 15:30:04 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-18 15:30:12 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-18 15:30:13 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-18 15:30:13 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-18 15:30:14 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-18 15:30:14 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-18 15:31:05 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-18 15:31:05 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-18 15:31:06 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-18 15:31:06 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-18 15:31:07 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`

@@ -1,0 +1,11 @@
+2023-06-20 14:48:02 - Permission denied (os error 13)
+2023-06-20 14:48:03 - error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)
+2023-06-20 14:48:05 - error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)
+2023-06-20 14:48:05 - error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)
+2023-06-20 14:48:06 - error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)
+2023-06-20 14:48:06 - last error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)
+2023-06-20 14:48:10 - [clash]: level=info msg="RESTful API listening at: 127.0.0.1:9090"
+2023-06-20 14:48:10 - [clash]: level=info msg="Mixed(http+socks) proxy listening at: 127.0.0.1:7890"
+2023-06-20 14:48:10 - running timer task `rJXPQ2huPmnv`
+2023-06-20 14:48:12 - [clash]: level=info msg="[TCP] 127.0.0.1:49694 --> xn--4gq62f52gdss.com:443 doesn't match any rule using DIRECT"
+2023-06-20 14:48:12 - failed to fetch remote profile with status 403 Forbidden

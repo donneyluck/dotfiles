@@ -1,0 +1,17 @@
+# The Config for Clash Verge App
+
+app_singleton_port: null
+language: en
+theme_mode: dark
+theme_blur: false
+traffic_graph: true
+enable_tun_mode: null
+enable_auto_launch: null
+enable_silent_start: null
+enable_system_proxy: true
+enable_proxy_guard: false
+system_proxy_bypass: locallocalhost;127.*;10.*;192.168.*;<loho.*;10.*;192.168.*;<local>
+proxy_guard_duration: 10
+theme_setting: null
+web_ui_list: null
+hotkeys: null

@@ -1,0 +1,12 @@
+2022-10-21 13:39:37 - [clash]: level=error msg="External controller listen error: listen tcp 127.0.0.1:9090: bind: address already in use"
+2022-10-21 13:39:37 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): connection closed before message completed`
+2022-10-21 13:39:37 - [clash]: level=info msg="Mixed(http+socks) proxy listening at: 127.0.0.1:7890"
+2022-10-21 13:39:37 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-21 13:39:38 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-21 13:39:38 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-21 13:39:39 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-21 13:39:46 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-21 13:39:46 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-21 13:39:47 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-21 13:39:47 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
+2022-10-21 13:39:48 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`

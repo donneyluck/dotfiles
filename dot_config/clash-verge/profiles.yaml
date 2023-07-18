@@ -1,0 +1,73 @@
+# Profiles Config for Clash Verge
+
+current: rG54CGISK8b1
+chain: null
+valid: null
+items:
+- uid: rG54CGISK8b1
+  type: remote
+  name: 青蒿的翻墙
+  file: rG54CGISK8b1.yaml
+  desc: ''
+  url: https://sub.djmyy.top/link/TfciAGQXD9on6a78?clash=1
+  selected:
+  - name: GLOBAL
+    now: DIRECT
+  - name: "\U0001F530国外流量"
+    now: 新加坡3 [x1.0-Netflix]
+  - name: ⚓️其他流量
+    now: "\U0001F530国外流量"
+  - name: ✈️Telegram
+    now: "\U0001F530国外流量"
+  - name: "\U0001F3ACYoutube"
+    now: "\U0001F530国外流量"
+  - name: "\U0001F3ACNetflix"
+    now: "\U0001F530国外流量"
+  - name: "\U0001F3AC哔哩哔哩"
+    now: 新加坡2 [x1.0-Netflix]
+  - name: "\U0001F3AC国外媒体"
+    now: "\U0001F530国外流量"
+  - name: "\U0001F34E苹果服务"
+    now: "\U0001F680直接连接"
+  - name: "\U0001F680直接连接"
+    now: DIRECT
+  - name: 一元机场
+    now: "\U0001F1ED\U0001F1F0香港 06 | 专线"
+  - name: 自动选择
+    now: "\U0001F1FA\U0001F1F8美国 02 | 专线"
+  - name: 故障转移
+    now: "\U0001F1ED\U0001F1F0香港 01 | 专线"
+  extra:
+    upload: 20655208748
+    download: 1011097371260
+    total: 4027142111232
+    expire: 1695537184
+  updated: 1689318456
+  option:
+    with_proxy: true
+    self_proxy: false
+    update_interval: 120
+- uid: rJXPQ2huPmnv
+  type: remote
+  name: 一元机场
+  file: rJXPQ2huPmnv.yaml
+  url: https://xn--4gq62f52gdss.com/api/v1/client/subscribe?token=8ec1a8e0922869db348ed46df935847a
+  selected:
+  - name: GLOBAL
+    now: DIRECT
+  - name: 一元机场
+    now: "\U0001F1ED\U0001F1F0香港 06 | 专线"
+  - name: 自动选择
+    now: 无法使用重新导入订阅，邀请60%返利
+  - name: 故障转移
+    now: 无法使用重新导入订阅，邀请60%返利
+  extra:
+    upload: 144017104
+    download: 8241879052
+    total: 536870912000
+    expire: 1697253200
+  updated: 1684724396
+  option:
+    with_proxy: false
+    self_proxy: true
+    update_interval: 1440
