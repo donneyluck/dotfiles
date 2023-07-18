@@ -1,4 +1,0 @@
-2022-09-22 19:23:28 - [clash]: level=info msg="RESTful API listening at: 127.0.0.1:9090"
-2022-09-22 19:23:28 - [clash]: level=info msg="Mixed(http+socks) proxy listening at: 127.0.0.1:7890"
-2022-09-22 19:23:40 - [clash]: level=info msg="[TCP] 127.0.0.1:34872 --> emacs-china.org:443 doesn't match any rule using DIRECT"
-2022-09-22 19:24:11 - [clash]: level=info msg="[TCP] 127.0.0.1:34874 --> client.relay.crisp.chat:443 doesn't match any rule using DIRECT"

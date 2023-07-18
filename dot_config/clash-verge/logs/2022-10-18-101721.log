@@ -1,8 +1,0 @@
-2022-10-18 10:17:21 - [clash]: level=error msg="External controller listen error: listen tcp 127.0.0.1:9090: bind: address already in use"
-2022-10-18 10:17:21 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): connection closed before message completed`
-2022-10-18 10:17:21 - [clash]: level=info msg="Mixed(http+socks) proxy listening at: [::]:7890"
-2022-10-18 10:17:21 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
-2022-10-18 10:17:22 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
-2022-10-18 10:17:22 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
-2022-10-18 10:17:23 - failed to activate for `error sending request for url (http://127.0.0.1:9090/configs): error trying to connect: tcp connect error: Connection refused (os error 111)`
-2022-10-18 10:24:09 - [clash]: level=info msg="[TCP] 127.0.0.1:43784 --> aur.archlinux.org:443 using GLOBAL"
