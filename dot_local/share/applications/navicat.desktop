@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=/usr/bin/navicat
+Type=Application
+Categories=Development
+Name=Navicat
+Icon=/usr/share/icons/Papirus/48x48/apps/navicat.svg
