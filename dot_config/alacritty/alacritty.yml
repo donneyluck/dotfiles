@@ -873,21 +873,20 @@ colors:
 # Fonts
 font:
   normal:
-   family: Courier New 
+   family: Iosevka Fixed Curly Slab 
    style: Bold
 
   bold:
-   family: Courier New
+   family: Iosevka Fixed Curly Slab
    style: Bold
 
   italic:
-   family: Courier New
+   family: Iosevka Fixed Curly Slab
    style: Italic
 
   bold_italic:
-   family: Noto Sans Mono
+   family: Iosevka Fixed Curly Slab
    style: Bold Italic
    
   size: 13
 
-    
