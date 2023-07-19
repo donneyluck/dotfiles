@@ -873,19 +873,23 @@ colors:
 # Fonts
 font:
   normal:
-   family: Iosevka Fixed Curly Slab 
+    #   family: Iosevka Fixed Curly Slab 
+   family: JetBrainsMono
    style: Bold
 
   bold:
-   family: Iosevka Fixed Curly Slab
+    #family: Iosevka Fixed Curly Slab
+   family: JetBrainsMono
    style: Bold
 
   italic:
-   family: Iosevka Fixed Curly Slab
+    #family: Iosevka Fixed Curly Slab
+   family: JetBrainsMono
    style: Italic
 
   bold_italic:
-   family: Iosevka Fixed Curly Slab
+    # family: Iosevka Fixed Curly Slab
+   family: inconsolata2 
    style: Bold Italic
    
   size: 13
