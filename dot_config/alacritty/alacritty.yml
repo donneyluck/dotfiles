@@ -889,7 +889,7 @@ font:
 
   bold_italic:
     # family: Iosevka Fixed Curly Slab
-   family: inconsolata2 
+   family: JetBrainsMono
    style: Bold Italic
    
   size: 13
