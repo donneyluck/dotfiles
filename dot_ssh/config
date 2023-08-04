@@ -1,0 +1,30 @@
+User root
+Port 22
+
+Host cn_gray
+   HostName 129.211.105.251
+Host cn_gray2
+   HostName 106.54.152.217
+Host publish
+  HostName 121.5.252.202
+  IdentityFile ~/.ssh/id_rsa
+Host gmtool
+  HostName 212.64.110.71
+  IdentityFile ~/.ssh/id_rsa
+Host my-gray01
+  HostName 43.128.151.161
+  IdentityFile ~/.ssh/mytail.pem
+Host my-gray05
+  HostName 43.128.150.90
+  IdentityFile ~/.ssh/mytail.pem
+Host my-test-game01
+  HostName 119.28.235.33
+  IdentityFile ~/.ssh/mytail.pem
+Host my-tools
+  HostName 119.28.235.49
+  IdentityFile ~/.ssh/mytail.pem
+Host my-game01
+  HostName 43.131.235.215
+  IdentityFile ~/.ssh/mytail.pem
+Host HK
+  HostName 150.109.65.179
