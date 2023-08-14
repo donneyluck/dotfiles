@@ -13,36 +13,36 @@ items:
   selected:
   - name: GLOBAL
     now: DIRECT
-  - name: "\U0001F530国外流量"
-    now: 新加坡3 [x1.0-Netflix]
-  - name: ⚓️其他流量
-    now: "\U0001F530国外流量"
-  - name: ✈️Telegram
-    now: "\U0001F530国外流量"
-  - name: "\U0001F3ACYoutube"
-    now: "\U0001F530国外流量"
-  - name: "\U0001F3ACNetflix"
-    now: "\U0001F530国外流量"
-  - name: "\U0001F3AC哔哩哔哩"
+  - name: 🔰国外流量
     now: 新加坡2 [x1.0-Netflix]
-  - name: "\U0001F3AC国外媒体"
-    now: "\U0001F530国外流量"
-  - name: "\U0001F34E苹果服务"
-    now: "\U0001F680直接连接"
-  - name: "\U0001F680直接连接"
+  - name: ⚓️其他流量
+    now: 🔰国外流量
+  - name: ✈️Telegram
+    now: 🔰国外流量
+  - name: 🎬Youtube
+    now: 🔰国外流量
+  - name: 🎬Netflix
+    now: 🔰国外流量
+  - name: 🎬哔哩哔哩
+    now: 新加坡2 [x1.0-Netflix]
+  - name: 🎬国外媒体
+    now: 🔰国外流量
+  - name: 🍎苹果服务
+    now: 🚀直接连接
+  - name: 🚀直接连接
     now: DIRECT
   - name: 一元机场
-    now: "\U0001F1ED\U0001F1F0香港 06 | 专线"
+    now: 🇭🇰香港 06 | 专线
   - name: 自动选择
-    now: "\U0001F1FA\U0001F1F8美国 02 | 专线"
+    now: 🇺🇸美国 02 | 专线
   - name: 故障转移
-    now: "\U0001F1ED\U0001F1F0香港 01 | 专线"
+    now: 🇭🇰香港 01 | 专线
   extra:
-    upload: 20655208748
-    download: 1011097371260
+    upload: 21993056574
+    download: 1133928047783
     total: 4027142111232
     expire: 1695537184
-  updated: 1689318456
+  updated: 1691976490
   option:
     with_proxy: true
     self_proxy: false
@@ -56,17 +56,17 @@ items:
   - name: GLOBAL
     now: DIRECT
   - name: 一元机场
-    now: "\U0001F1ED\U0001F1F0香港 06 | 专线"
+    now: 🇭🇰香港 06 | 专线
   - name: 自动选择
     now: 无法使用重新导入订阅，邀请60%返利
   - name: 故障转移
     now: 无法使用重新导入订阅，邀请60%返利
   extra:
-    upload: 144017104
-    download: 8241879052
+    upload: 71841988
+    download: 4741276306
     total: 536870912000
     expire: 1697253200
-  updated: 1684724396
+  updated: 1691911688
   option:
     with_proxy: false
     self_proxy: true

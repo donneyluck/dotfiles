@@ -1,6 +1,7 @@
-# The Config for Clash Verge App
+# Clash Verge Config
 
 app_singleton_port: null
+app_log_level: null
 language: en
 theme_mode: dark
 theme_blur: false
@@ -15,3 +16,13 @@ proxy_guard_duration: 10
 theme_setting: null
 web_ui_list: null
 hotkeys: null
+auto_close_connection: null
+default_latency_test: null
+enable_clash_fields: null
+enable_builtin_enhanced: null
+proxy_layout_column: null
+window_size_position:
+- 1886.0
+- 946.0
+- 17.0
+- 17.0
