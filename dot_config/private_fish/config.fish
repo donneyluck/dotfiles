@@ -2,7 +2,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-if test -f /home/donney/.autojump/share/autojump/autojump.fish; . /home/donney/.autojump/share/autojump/autojump.fish; end
+#if test -f /home/donney/.autojump/share/autojump/autojump.fish; . /home/donney/.autojump/share/autojump/autojump.fish; end
+if test -f /usr/share/fish/functions/autojump.fish; . /usr/share/fish/functions/autojump.fish; end
 
 export EDITOR=vim
 export HTTP_PROXY='127.0.0.1:7890'
@@ -28,8 +29,8 @@ end
 #   nohup nautilus -w $argv[1] > /dev/null 2>&1 &
 #end
 
-function open -d "open dir use thunar"
-   thunar $argv[1] & 
+function open -d "open dir use pcmanfm"
+   pcmanfm > /dev/null 2&>1
 end
 
 function proxy_on -d "open proxy"
