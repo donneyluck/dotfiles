@@ -30,7 +30,7 @@ end
 #end
 
 function open -d "open dir use pcmanfm"
-   pcmanfm > /dev/null 2&>1
+   pcmanfm > /dev/null 2>&1
 end
 
 function proxy_on -d "open proxy"
