@@ -1,11 +1,12 @@
 # Clash Verge Config
 
 app_singleton_port: null
-app_log_level: null
-language: en
-theme_mode: dark
+app_log_level: silent
+language: zh
+theme_mode: light
 theme_blur: false
-traffic_graph: true
+traffic_graph: false
+enable_memory_usage: false
 enable_tun_mode: null
 enable_auto_launch: null
 enable_silent_start: null
@@ -16,13 +17,13 @@ proxy_guard_duration: 10
 theme_setting: null
 web_ui_list: null
 hotkeys: null
-auto_close_connection: null
-default_latency_test: null
-enable_clash_fields: null
-enable_builtin_enhanced: null
-proxy_layout_column: null
+auto_close_connection: false
+default_latency_test: ''
+enable_clash_fields: true
+enable_builtin_enhanced: true
+proxy_layout_column: 6
 window_size_position:
-- 1886.0
-- 946.0
+- 1344.0
+- 765.0
 - 17.0
 - 17.0

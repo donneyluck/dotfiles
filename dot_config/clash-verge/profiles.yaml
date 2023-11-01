@@ -12,9 +12,9 @@ items:
   url: https://sub.djmyy.top/link/TfciAGQXD9on6a78?clash=1
   selected:
   - name: GLOBAL
-    now: DIRECT
+    now: 香港1 [x1.0-Netflix]
   - name: 🔰国外流量
-    now: 新加坡2 [x1.0-Netflix]
+    now: 香港4 [x1.0-Netflix]
   - name: ⚓️其他流量
     now: 🔰国外流量
   - name: ✈️Telegram
@@ -31,43 +31,45 @@ items:
     now: 🚀直接连接
   - name: 🚀直接连接
     now: DIRECT
-  - name: 一元机场
-    now: 🇭🇰香港 06 | 专线
-  - name: 自动选择
-    now: 🇺🇸美国 02 | 专线
-  - name: 故障转移
-    now: 🇭🇰香港 01 | 专线
   extra:
-    upload: 21993056574
-    download: 1133928047783
-    total: 4027142111232
-    expire: 1695537184
-  updated: 1691976490
+    upload: 34117145824
+    download: 2017376052056
+    total: 6035800588288
+    expire: 1727073184
+  updated: 1698804949
   option:
     with_proxy: true
     self_proxy: false
     update_interval: 120
-- uid: rJXPQ2huPmnv
+- uid: rNhbbqXCaPfL
   type: remote
-  name: 一元机场
-  file: rJXPQ2huPmnv.yaml
-  url: https://xn--4gq62f52gdss.com/api/v1/client/subscribe?token=8ec1a8e0922869db348ed46df935847a
-  selected:
-  - name: GLOBAL
-    now: DIRECT
-  - name: 一元机场
-    now: 🇭🇰香港 06 | 专线
-  - name: 自动选择
-    now: 无法使用重新导入订阅，邀请60%返利
-  - name: 故障转移
-    now: 无法使用重新导入订阅，邀请60%返利
+  name: 郝秀雷翻墙
+  file: rNhbbqXCaPfL.yaml
+  desc: ''
+  url: https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=dphe5hb3kp97kv2u76je875fotck1w3i
   extra:
-    upload: 71841988
-    download: 4741276306
+    upload: 13843766
+    download: 1185367598
     total: 536870912000
-    expire: 1697253200
-  updated: 1691911688
+    expire: 1718519934
+  updated: 1698804948
   option:
     with_proxy: false
-    self_proxy: true
+    self_proxy: false
+    update_interval: 1440
+- uid: rnpqbsZe8x2Q
+  type: remote
+  name: 海龙的翻墙
+  file: rnpqbsZe8x2Q.yaml
+  desc: ''
+  url: https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=1f4b8e0567be8481ffaeebf1b53211eb
+  extra:
+    upload: 0
+    download: 0
+    total: 536870912000
+    expire: 1758780421
+  updated: 1698804948
+  option:
+    with_proxy: false
+    self_proxy: false
     update_interval: 1440
