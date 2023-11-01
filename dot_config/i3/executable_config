@@ -13,9 +13,8 @@ set $mod Mod4
 #set $WS0 10: 
 
 set $WS1 "1: Terminal"
-#set $WS2 "2: Code"
 set $WS2 "2: Code"
-set $WS3 "3: Browser"
+set $WS3 "3:  Browser"
 set $WS4 "4: Tool"
 set $WS5 "5: File"
 set $WS6 "6: Chat"
@@ -28,14 +27,17 @@ set $WS9 "9: Anydesk"
 #exec --no-startup-id "i3-msg 'workspace $WS1; append_layout ~/.config/i3/workspace-1.json;exec alacritty; exec alacritty; exec alacritty;exec chromium --proxy-server=\"192.168.101.66:7890\";exec emacs'"
 #背景和文字
 #exec_always ~/.config/polybar/launch.sh
-#exec_always --no-startup-id "sleep 0.5;feh --randomize --bg-scale ~/Pictures/wallpaper/*"
-exec_always --no-startup-id ~/.config/i3/wallpic.sh
+#exec_always --no-startup-id "sleep 0.5;feh --randomize --bg-scale ~/Pictures/wallpaper/"
+#exec_always --no-startup-id ~/.config/i3/wallpic.sh
 #exec --no-startup-id "sleep 1; anydesk"
 exec --no-startup-id "fcitx5 -d"
 exec_always --no-startup-id autotiling
+exec --no-startup-id vmware-user-suid-wrapper
+exec --no-startup-id variety &
 #exec_always --no-startup-id "pkill conky; sleep 0.5; conky -c ~/.config/i3/left; conky -c ~/.config/i3/right"
-#exec --no-startup-id "sleep l; xrandr --output Virtual1 --mode 2560x1600"
-font pango:Font Awesome 6 Free 10
+#exec --no-startup-id "xrandr --output Virtual1 --mode 2560x1600"
+#font pango:Font Awesome 6 Free 10
+font pango:Diablo Heavy 12
 
 #floating模式下按住alt键进行拉拽
 floating_modifier $mod
@@ -43,7 +45,7 @@ floating_modifier $mod
 
 #一些常见绑定
 #prt sc键进行选择性截屏，并且保存在~/Pictures/shot/目录下
-bindsym Print exec shutter -s -o ~/Pictures/shot/%Y-%m-%d-%T.png
+#bindsym Print exec shutter -s -o ~/Pictures/shot/%Y-%m-%d-%T.png
 
 #退出当前程序
 #bindsym $mod+Shift+q kill
@@ -56,14 +58,19 @@ bindsym $mod+t exec thunar
 bindsym $mod+Return exec --no-startup-id alacritty
 #wmctrl -a alacritty || alacritty -t alacritty
 #打开游览器
-bindsym $mod+w exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7890"
+#bindsym $mod+w exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7890"
 #bindsym $mod+w exec --no-startup-id xdotool search --class "google-chrome" windowactivate || google-chrome-stable
 #打开emacs
 bindsym $mod+e exec --no-startup-id wmctrl -xa emacs ||  /usr/local/bin/emacs
 #打开ranger
 #bindsym $mod+r exec --no-startup-id wmctrl -a myranger || alacritty -t myranger -e ranger .
+
 #运行rofi
-bindsym $mod+d exec rofi -show drun -theme awel
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-6/launcher.sh
+bindsym $mod+s exec --no-startup-id ~/.config/rofi/powermenu/type-6/powermenu.sh
+#bindsym $mod+w exec --no-startup-id ~/.config/rofi/applets/bin/quicklinks.sh
+#Print截图键
+bindsym $mod+p exec --no-startup-id  ~/.config/rofi/applets/bin/screenshot.sh
 
 
 #切换到水平模式 bindsym $mod+b split h
@@ -126,7 +133,7 @@ exec --no-startup-id picom -b
 #for_window [class="Alacritty"] layout stacking
 assign [class="Alacritty"] $WS1
 assign [class="Emacs"] $WS2
-#assign [class="Thunar"] $WS5
+assign [class="Pcmanfm"] $WS5
 assign [class="firefox"] $WS3
 assign [class="^.*Google-chrome$"] $WS3
 assign [class="Shutter"] $WS4
@@ -135,7 +142,8 @@ assign [class="Calibre"] $WS4
 assign [class="^WPS.*$"] $WS4
 assign [class="^DesktopEditors$"] $WS4
 assign [class="^Postman$"] $WS4
-#assign [class="^RedisDesktopManager$"] $WS4
+assign [class="^DBeaver Ultimate$"] $WS4
+assign [class="^Navicat.*$"] $WS4
 assign [class="^RedisInsight-v2$"] $WS4
 assign [class="^QuickRedis$"] $WS4
 assign [class="^.*Nautilus$"] $WS5
@@ -264,14 +272,14 @@ bar {
 set $mode_system  lock(L) logout(O) reboot(R) shutdown(S) i3 restart(I) exit(Esc)
 bindsym $mod+Shift+s mode "$mode_system"
 mode "$mode_system" {
-  bindsym l exec --no-startup-id ~/.config/i3/lockpic.sh mode "default"
+  #bindsym l exec --no-startup-id ~/.config/i3/lockpic.sh mode "default"
   #bindsym l exec --no-startup-id i3lock -c '#000000', mode "default"
-  #bindsym l exec --no-startup-id i3lock-fancy -t "Don`t touch my manjaro", mode "default"
+  bindsym l exec --no-startup-id i3lock-fancy -t "Don`t touch my manjaro", mode "default"
   bindsym o exec --no-startup-id i3-msg exit, mode "default"
   bindsym r exec --no-startup-id systemctl reboot, mode "default"
   bindsym s exec --no-startup-id systemctl poweroff, mode "default"
   bindsym Escape mode "default"
-    bindsym i restart, mode "default"
+  bindsym i restart, mode "default"
 }
 
 
