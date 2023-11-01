@@ -24,8 +24,8 @@ fi
 # CMDs (add your apps here)
 term_cmd='alacritty'
 file_cmd='thunar'
-text_cmd='geany'
-web_cmd='firefox'
+text_cmd='emacs'
+web_cmd='google-chrome-stable'
 music_cmd='alacritty -e ncmpcpp'
 setting_cmd='xfce4-settings-manager'
 
