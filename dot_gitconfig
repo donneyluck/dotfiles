@@ -1,3 +1,5 @@
 [user]
 	name = donneyluck
 	email = donney.luck@gmail.com
+[credential]
+	helper = store
