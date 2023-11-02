@@ -105,7 +105,7 @@ case ${chosen} in
 		if [[ -x '/usr/bin/betterlockscreen_rapid' ]]; then
             betterlockscreen_rapid 5 5
 		elif [[ -x '/usr/bin/i3lock' ]]; then
-            i3lock-fancy-rapid 5 5 -t "Locked"
+			i3lock
 		fi
         ;;
     $suspend)

@@ -36,8 +36,8 @@ exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id variety &
 #exec_always --no-startup-id "pkill conky; sleep 0.5; conky -c ~/.config/i3/left; conky -c ~/.config/i3/right"
 #exec --no-startup-id "xrandr --output Virtual1 --mode 2560x1600"
-#font pango:Font Awesome 6 Free 10
-font pango:Diablo Heavy 12
+font pango:Font Awesome 6 Free 10
+#font pango:Diablo Heavy 12
 
 #floating模式下按住alt键进行拉拽
 floating_modifier $mod
@@ -58,7 +58,7 @@ bindsym $mod+t exec thunar
 bindsym $mod+Return exec --no-startup-id alacritty
 #wmctrl -a alacritty || alacritty -t alacritty
 #打开游览器
-#bindsym $mod+w exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7890"
+bindsym $mod+w exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7890"
 #bindsym $mod+w exec --no-startup-id xdotool search --class "google-chrome" windowactivate || google-chrome-stable
 #打开emacs
 bindsym $mod+e exec --no-startup-id wmctrl -xa emacs ||  /usr/local/bin/emacs
