@@ -28,6 +28,53 @@ end
 #function open -d "open dir use nautilus"
 #   nohup nautilus -w $argv[1] > /dev/null 2>&1 &
 #end
+set -l red "\e[31m"  # 红色 ANSI 转义码
+set -l green "\e[32m"  # 绿色 ANSI 转义码
+set -l reset "\e[0m"  # 重置 ANSI 转义码
+
+function sshlist
+    set -l config_file ~/.ssh/config  # SSH 配置文件的路径
+    if test -e $config_file
+        # 使用 awk 提取配置文件中的主机条目
+        set hosts (awk '/^Host[ \t]+/ { sub(/Host[ \t]+/, ""); print }' $config_file)
+
+        set -l i 1
+        for host in $hosts
+            set_color green
+            # echo "[$i] $host"
+            echo -n [$i]
+            set_color red
+            echo -n " $host"
+
+            # 使用 awk 提取主机的IP地址
+            set ip_address (awk -v target_host="$host" '$1 == "Host" && $2 == target_host { found_host = 1; next } found_host && $1 == "HostName" { print $2; exit }' $config_file)
+            set_color blue
+            echo -n " -> IP: "
+            set_color normal
+            echo $ip_address
+
+            set_color normal
+            set -a server_list $host
+            set -a ip_list $ip_address
+            set i (math $i + 1)
+        end
+
+        echo "Choose a server to connect to (1-$i):"
+        set choice
+        read -P "Selection: " choice
+
+        if test -n "$choice" -a $choice -ge 1 -a $choice -le $i
+            set selected_server $server_list[$choice]
+            set selected_ip $ip_list[$choice]
+            echo "Connecting to $selected_server ($selected_ip)..."
+            ssh $selected_server
+        else
+            echo "Invalid selection. Please choose a valid number."
+        end
+    else
+        echo "SSH config file not found: $config_file"
+    end
+end
 
 function open -d "open dir use pcmanfm"
    pcmanfm > /dev/null 2>&1
@@ -73,17 +120,17 @@ function backup
   cp $argv[1]{,.bak}
 end
 
-function sshlist
-  for host in (awk '/^Host/{if ($2!="*") print $2}' ~/.ssh/config)
-    #set_color red
-    set_color green
-    echo -n $host
-    set_color normal
-    rg $host ~/.ssh/config -A2 | awk '/^\s*HostName/{if ($2 != "*") printf " -> IP: %s",$2}'
-    rg $host ~/.ssh/config -A2 | awk '/^\s*IdentityFile/{if ($2 != "*") printf " -> ID_FILE: %s",$2}'
-    echo ""
-  end
-end
+# function sshlist
+#   for host in (awk '/^Host/{if ($2!="*") print $2}' ~/.ssh/config)
+#     #set_color red
+#     set_color green
+#     echo -n $host
+#     set_color normal
+#     rg $host ~/.ssh/config -A2 | awk '/^\s*HostName/{if ($2 != "*") printf " -> IP: %s",$2}'
+#     rg $host ~/.ssh/config -A2 | awk '/^\s*IdentityFile/{if ($2 != "*") printf " -> ID_FILE: %s",$2}'
+#     echo ""
+#   end
+# end
 
 function wtf -d "Print which and --version output for the given command"
     for arg in $argv
