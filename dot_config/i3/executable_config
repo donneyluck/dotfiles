@@ -1,6 +1,6 @@
 #************************************基本设置*******************************************
 #设置基本的工作区和热键(win)
-set $mod Mod4
+set $mod Mod1
 #set $WS1  1: 
 #set $WS2  2: 
 #set $WS3  3: 
@@ -30,12 +30,15 @@ set $WS9 "9: Anydesk"
 #exec_always --no-startup-id "sleep 0.5;feh --randomize --bg-scale ~/Pictures/wallpaper/"
 #exec_always --no-startup-id ~/.config/i3/wallpic.sh
 #exec --no-startup-id "sleep 1; anydesk"
+#启动输入法
 exec --no-startup-id "fcitx5 -d"
-exec_always --no-startup-id autotiling
+#自动分屏
+exec --no-startup-id autotiling
+#调整分辨率
+exec --no-startup-id "xrandr --output Virtual1 --mode 1920x1080"
 exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id variety &
 #exec_always --no-startup-id "pkill conky; sleep 0.5; conky -c ~/.config/i3/left; conky -c ~/.config/i3/right"
-#exec --no-startup-id "xrandr --output Virtual1 --mode 2560x1600"
 font pango:Font Awesome 6 Free 10
 #font pango:Diablo Heavy 12
 
@@ -56,14 +59,11 @@ bindsym $mod+t exec thunar
 
 #打开终端
 bindsym $mod+Return exec --no-startup-id alacritty
-#wmctrl -a alacritty || alacritty -t alacritty
 #打开游览器
 bindsym $mod+w exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7890"
 #bindsym $mod+w exec --no-startup-id xdotool search --class "google-chrome" windowactivate || google-chrome-stable
 #打开emacs
 bindsym $mod+e exec --no-startup-id wmctrl -xa emacs ||  /usr/local/bin/emacs
-#打开ranger
-#bindsym $mod+r exec --no-startup-id wmctrl -a myranger || alacritty -t myranger -e ranger .
 
 #运行rofi
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-6/launcher.sh
@@ -156,10 +156,10 @@ assign [class="Anydesk"] $WS9
 assign [class="^.*cataclysm.*$"] $WS0
 
 #**************************************焦点和窗口移动**************************************
-# bindsym $mod+h focus left
-# bindsym $mod+j focus down
-# bindsym $mod+k focus up
-# bindsym $mod+l focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
