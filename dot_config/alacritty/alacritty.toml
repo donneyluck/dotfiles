@@ -1,0 +1,20 @@
+import = ["/home/donney/.config/alacritty/themes/themes/tango_dark.toml"]
+
+[font]
+size = 13
+
+[font.bold]
+family = "Courier New"
+style = "Bold"
+
+[font.bold_italic]
+family = "Courier New"
+style = "Bold Italic"
+
+[font.italic]
+family = "Courier New"
+style = "Italic"
+
+[font.normal]
+family = "Courier New"
+style = "Bold"
