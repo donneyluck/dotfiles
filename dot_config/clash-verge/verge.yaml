@@ -3,7 +3,7 @@
 app_singleton_port: null
 app_log_level: silent
 language: zh
-theme_mode: light
+theme_mode: dark
 theme_blur: false
 traffic_graph: false
 enable_memory_usage: false
@@ -23,7 +23,7 @@ enable_clash_fields: true
 enable_builtin_enhanced: true
 proxy_layout_column: 6
 window_size_position:
-- 1344.0
-- 765.0
+- 1886.0
+- 1008.0
 - 17.0
 - 17.0

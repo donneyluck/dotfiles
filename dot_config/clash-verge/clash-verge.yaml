@@ -15,7 +15,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 新加坡2 [x1.0-Netflix]
@@ -25,7 +25,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 新加坡3 [x1.0-Netflix]
@@ -35,7 +35,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 新加坡4 [x1.0-Netflix]
@@ -45,7 +45,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 新加坡5 [x1.0-Netflix]
@@ -55,7 +55,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 日本1 [x1.0-Netflix]
@@ -65,7 +65,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 日本2 [x1.0-Netflix]
@@ -75,7 +75,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 日本3 [x1.0-Netflix]
@@ -85,7 +85,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 日本4 [x1.0-Netflix]
@@ -95,7 +95,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 日本5 [x1.0-Netflix]
@@ -105,7 +105,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 美国1 [x1.0-Netflix]
@@ -115,7 +115,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 美国2 [x1.0-Netflix]
@@ -125,7 +125,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 美国3 [x1.0-Netflix]
@@ -135,7 +135,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 美国4 [x1.0-Netflix]
@@ -145,7 +145,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 美国5 [x1.0-Netflix]
@@ -155,7 +155,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 美国6 [x0.1-下载专用]
@@ -165,7 +165,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 美国7 [x0.1-下载专用]
@@ -175,7 +175,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 香港1 [x1.0-Netflix]
@@ -185,7 +185,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 香港2 [x1.0-Netflix]
@@ -195,7 +195,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 香港3 [x1.0-Netflix]
@@ -205,7 +205,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 香港4 [x1.0-Netflix]
@@ -215,7 +215,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 - name: 香港5 [x1.0-Netflix]
@@ -225,7 +225,7 @@ proxies:
   cipher: chacha20-ietf
   password: 1C0SNZ
   protocol: auth_aes128_sha1
-  protocol-param: 30031:ZDe5ic
+  protocol-param: 35997:ijuEm3
   obfs: http_simple
   obfs-param: ajax.microsoft.com
 proxy-groups:

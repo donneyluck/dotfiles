@@ -1,75 +1,37 @@
 # Profiles Config for Clash Verge
 
-current: rG54CGISK8b1
+current: rzPvZKyEewov
 chain: null
 valid: null
 items:
-- uid: rG54CGISK8b1
+- uid: rMbL4aGa2hlt
+  type: remote
+  name: 宏远的翻墙
+  file: rMbL4aGa2hlt.yaml
+  desc: ''
+  url: https://mojie0201.xn--8stx8olrwkucjq3b.com/api/v1/client/subscribe?token=7eb3fdc461a5851cb3e7e5cebd335481
+  extra:
+    upload: 1096333338
+    download: 36453726118
+    total: 139586437120
+    expire: 0
+  updated: 1713280474
+  option:
+    with_proxy: false
+    self_proxy: false
+    update_interval: 1440
+- uid: rzPvZKyEewov
   type: remote
   name: 青蒿的翻墙
-  file: rG54CGISK8b1.yaml
+  file: rzPvZKyEewov.yaml
   desc: ''
-  url: https://sub.djmyy.top/link/TfciAGQXD9on6a78?clash=1
-  selected:
-  - name: GLOBAL
-    now: 香港1 [x1.0-Netflix]
-  - name: 🔰国外流量
-    now: 香港4 [x1.0-Netflix]
-  - name: ⚓️其他流量
-    now: 🔰国外流量
-  - name: ✈️Telegram
-    now: 🔰国外流量
-  - name: 🎬Youtube
-    now: 🔰国外流量
-  - name: 🎬Netflix
-    now: 🔰国外流量
-  - name: 🎬哔哩哔哩
-    now: 新加坡2 [x1.0-Netflix]
-  - name: 🎬国外媒体
-    now: 🔰国外流量
-  - name: 🍎苹果服务
-    now: 🚀直接连接
-  - name: 🚀直接连接
-    now: DIRECT
+  url: https://sub.djmyy.top/link/XeUVQqM7VSht65Q4?clash=1
   extra:
-    upload: 34117145824
-    download: 2017376052056
-    total: 6035800588288
-    expire: 1727073184
-  updated: 1698804949
-  option:
-    with_proxy: true
-    self_proxy: false
-    update_interval: 120
-- uid: rNhbbqXCaPfL
-  type: remote
-  name: 郝秀雷翻墙
-  file: rNhbbqXCaPfL.yaml
-  desc: ''
-  url: https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=dphe5hb3kp97kv2u76je875fotck1w3i
-  extra:
-    upload: 13843766
-    download: 1185367598
-    total: 536870912000
-    expire: 1718519934
-  updated: 1698804948
+    upload: 3164730856
+    download: 213854912476
+    total: 825449512960
+    expire: 1721373967
+  updated: 1713280480
   option:
     with_proxy: false
     self_proxy: false
-    update_interval: 1440
-- uid: rnpqbsZe8x2Q
-  type: remote
-  name: 海龙的翻墙
-  file: rnpqbsZe8x2Q.yaml
-  desc: ''
-  url: https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=1f4b8e0567be8481ffaeebf1b53211eb
-  extra:
-    upload: 0
-    download: 0
-    total: 536870912000
-    expire: 1758780421
-  updated: 1698804948
-  option:
-    with_proxy: false
-    self_proxy: false
-    update_interval: 1440
