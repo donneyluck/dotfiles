@@ -81,15 +81,15 @@ function open -d "open dir use pcmanfm"
 end
 
 function proxy_on -d "open proxy"
-  export http_proxy='127.0.0.1:7890'
-  export https_proxy='127.0.0.1:7890'
+  export HTTP_PROXY='127.0.0.1:7890'
+  export HTTPS_PROXY='127.0.0.1:7890'
   export ALL_PROXY='socks5://127.0.0.1:7891'
   echo -e "proxy on"
 end
 
 function proxy_off -d "close proxy"
-  unset http_proxy
-  unset https_proxy
+  unset HTTP_PROXY
+  unset HTTPS_PROXY
   unset ALL_PROXY
   echo -e "proxy off"
 end
