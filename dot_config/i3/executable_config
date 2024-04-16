@@ -1,6 +1,6 @@
 #************************************基本设置*******************************************
 #设置基本的工作区和热键(win)
-set $mod Mod1
+set $mod Mod4
 #set $WS1  1: 
 #set $WS2  2: 
 #set $WS3  3: 
@@ -35,6 +35,7 @@ exec --no-startup-id "fcitx5 -d"
 #自动分屏
 exec --no-startup-id autotiling
 #调整分辨率
+#exec --no-startup-id "xrandr --output Virtual1 --mode 1920x1080"
 exec --no-startup-id "xrandr --output Virtual1 --mode 1920x1080"
 exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id variety &
