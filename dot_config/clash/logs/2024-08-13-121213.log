@@ -1,0 +1,23 @@
+12:12:13 INF [API] listening addr=127.0.0.1:34421
+12:12:13 WRN [Inbound] create listener error type=mixed addr=127.0.0.1:7890 network=tcp error=listen tcp 127.0.0.1:7890: bind: address already in use
+12:12:13 WRN [Inbound] create listener error type=mixed addr=127.0.0.1:7890 network=udp error=listen udp 127.0.0.1:7890: bind: address already in use
+12:13:58 INF [Config] initial compatible provider name=🔰国外流量
+12:13:58 INF [Config] initial compatible provider name=🎬国外媒体
+12:13:58 INF [Config] initial compatible provider name=⚓️其他流量
+12:13:58 INF [Config] initial compatible provider name=🎬哔哩哔哩
+12:13:58 INF [Config] initial compatible provider name=🚀直接连接
+12:13:58 INF [Config] initial compatible provider name=🎬Netflix
+12:13:58 INF [Config] initial compatible provider name=🎬Youtube
+12:13:58 INF [Config] initial compatible provider name=🍎苹果服务
+12:13:58 INF [Config] initial compatible provider name=✈️Telegram
+12:13:58 ERR [DNS] start DNS server failed error=listen udp 0.0.0.0:53: bind: permission denied addr=0.0.0.0:53
+12:19:13 INF [Config] initial compatible provider name=🚀直接连接
+12:19:13 INF [Config] initial compatible provider name=✈️Telegram
+12:19:13 INF [Config] initial compatible provider name=🎬国外媒体
+12:19:13 INF [Config] initial compatible provider name=🍎苹果服务
+12:19:13 INF [Config] initial compatible provider name=🔰国外流量
+12:19:13 INF [Config] initial compatible provider name=🎬Netflix
+12:19:13 INF [Config] initial compatible provider name=⚓️其他流量
+12:19:13 INF [Config] initial compatible provider name=🎬哔哩哔哩
+12:19:13 INF [Config] initial compatible provider name=🎬Youtube
+12:19:13 ERR [DNS] start DNS server failed error=listen udp 0.0.0.0:53: bind: permission denied addr=0.0.0.0:53
