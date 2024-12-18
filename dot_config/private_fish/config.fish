@@ -6,9 +6,9 @@ end
 if test -f /usr/share/fish/functions/autojump.fish; . /usr/share/fish/functions/autojump.fish; end
 
 export EDITOR=vim
-export HTTP_PROXY='127.0.0.1:7890'
-export HTTPS_PROXY='127.0.0.1:7890'
-export ALL_PROXY='socks5://127.0.0.1:7891'
+#export HTTP_PROXY='127.0.0.1:7890'
+#export HTTPS_PROXY='127.0.0.1:7890'
+#export ALL_PROXY='socks5://127.0.0.1:7891'
 export TERM=xterm;
 
 alias ll 'ls -la'
@@ -81,17 +81,27 @@ function open -d "open dir use pcmanfm"
 end
 
 function proxy_on -d "open proxy"
-  export HTTP_PROXY='127.0.0.1:7890'
-  export HTTPS_PROXY='127.0.0.1:7890'
-  export ALL_PROXY='socks5://127.0.0.1:7891'
-  echo -e "proxy on"
+     export http_proxy=http://127.0.0.1:7890
+     export https_proxy=http://127.0.0.1:7890
+     export all_proxy=http://127.0.0.1:7890
+     export no_proxy=127.0.0.1,localhost
+     export HTTP_PROXY=http://127.0.0.1:7890
+     export HTTPS_PROXY=http://127.0.0.1:7890
+     export ALL_PROXY=http://127.0.0.1:7890
+     export NO_PROXY=127.0.0.1,localhost
+     echo -e "\033[32m[√] 已开启代理\033[0m"
 end
 
 function proxy_off -d "close proxy"
-  unset HTTP_PROXY
-  unset HTTPS_PROXY
-  unset ALL_PROXY
-  echo -e "proxy off"
+     unset http_proxy
+     unset https_proxy
+     unset all_proxy
+     unset no_proxy
+     unset HTTP_PROXY
+     unset HTTPS_PROXY
+     unset ALL_PROXY
+     unset NO_PROXY
+     echo -e "\033[31m[×] 已关闭代理\033[0m"
 end
 
 function proxy_update -d "update proxy"

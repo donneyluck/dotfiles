@@ -1,20 +1,20 @@
-general.import = ["/home/donney/.config/alacritty/themes/themes/base16_default_theme.toml"]
+import = ["/home/donney/.config/alacritty/themes/themes/tango_dark.toml"]
 
 [font]
 size = 13
 
 [font.bold]
-family = "JetBrainsMonoNerdFont"
+family = "Courier New"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMonoNerdFont"
+family = "Courier New"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMonoNerdFont"
+family = "Courier New"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMonoNerdFont"
+family = "Courier New"
 style = "Bold"

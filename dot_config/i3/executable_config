@@ -1,6 +1,6 @@
 #************************************基本设置*******************************************
 #设置基本的工作区和热键(win)
-set $mod mod1
+set $mod Mod1
 #set $WS1  1: 
 #set $WS2  2: 
 #set $WS3  3: 
@@ -31,14 +31,14 @@ set $WS9 "9: Anydesk"
 #exec_always --no-startup-id ~/.config/i3/wallpic.sh
 #exec --no-startup-id "sleep 1; anydesk"
 #启动输入法
-exec_always --no-startup-id "fcitx5 -d"
+exec --no-startup-id "fcitx5 -d"
 #自动分屏
-exec_always --no-startup-id autotiling
+exec --no-startup-id autotiling
 #调整分辨率
-#exec --no-startup-id "xrandr --output Virtual1 --mode 1920x1440"
-exec --no-startup-id "xrandr --output Virtual1 --mode 2560x1440"
+#exec --no-startup-id "xrandr --output Virtual1 --mode 1920x1080"
+exec --no-startup-id "xrandr --output Virtual1 --mode 1920x1080"
 exec --no-startup-id vmware-user-suid-wrapper
-#exec --no-startup-id variety &
+exec --no-startup-id variety &
 #exec_always --no-startup-id "pkill conky; sleep 0.5; conky -c ~/.config/i3/left; conky -c ~/.config/i3/right"
 font pango:Font Awesome 6 Free 10
 #font pango:Diablo Heavy 12
@@ -61,8 +61,7 @@ bindsym $mod+t exec thunar
 #打开终端
 bindsym $mod+Return exec --no-startup-id alacritty
 #打开游览器
-bindsym $mod+w exec --no-startup-id google-chrome-beta --proxy-server="127.0.0.1:7890"
-#bindsym $mod+w exec --no-startup-id google-chrome-beta
+bindsym $mod+w exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7890"
 #bindsym $mod+w exec --no-startup-id xdotool search --class "google-chrome" windowactivate || google-chrome-stable
 #打开emacs
 bindsym $mod+e exec --no-startup-id wmctrl -xa emacs ||  /usr/local/bin/emacs
@@ -77,9 +76,9 @@ bindsym $mod+p exec --no-startup-id  ~/.config/rofi/applets/bin/screenshot.sh
 
 #切换到水平模式 bindsym $mod+b split h
 #切换到垂直模式
-#bindsym $mod+v split v
+bindsym $mod+v split v
 #切换到焦点
-#bindsym $mod+x [urgent=latest] focus
+bindsym $mod+x [urgent=latest] focus
 #全屏
 bindsym $mod+f fullscreen toggle
 
@@ -232,12 +231,12 @@ bindsym $mod+Shift+r mode "resize"
 
 #**************************************************主题设置*********************************************
 # 窗口颜色                边框    背景    文字    提示
-client.focused          #555555 #FF0000 #FFFFFF #FF0000
-client.focused_inactive #999999 #999999 #FFFFFF #999999
-client.unfocused        #999999 #999999 #FFFFFF #999999
-client.urgent           #999999 #999999 #FFFFFF #999999
+client.focused          #3297fd #333333 #FFFFFF #333333
+client.focused_inactive #999999 #999999 #FFFFFF #3399FF
+client.unfocused        #999999 #000000 #FFFFFF #3399FF
+client.urgent           #990000 #990000 #FFFFFF #990000
 client.placeholder      #000000 #000000 #FFFFFF #000000
-client.background       #FF0000
+client.background       #FFFFFF
 
 #i3bar设置
 bar {
