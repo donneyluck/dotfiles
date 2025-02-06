@@ -1,4 +1,4 @@
-import = ["/home/donney/.config/alacritty/themes/themes/tango_dark.toml"]
+general.import = ["/home/donney/.config/alacritty/themes/themes/tango_dark.toml"]
 
 [font]
 size = 13

@@ -61,7 +61,7 @@ bindsym $mod+t exec thunar
 #打开终端
 bindsym $mod+Return exec --no-startup-id alacritty
 #打开游览器
-bindsym $mod+w exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7890"
+#bindsym $mod+w exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7890"
 #bindsym $mod+w exec --no-startup-id xdotool search --class "google-chrome" windowactivate || google-chrome-stable
 #打开emacs
 bindsym $mod+e exec --no-startup-id wmctrl -xa emacs ||  /usr/local/bin/emacs
