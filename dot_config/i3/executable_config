@@ -118,7 +118,7 @@ bindsym $mod+minus scratchpad show
 
 ######一些软件设置
 #开机自起compton
-exec --no-startup-id picom -b
+#exec --no-startup-id picom -b
 
 #开机自起fcitx
 #exec_always --no-startup-id fcitx
