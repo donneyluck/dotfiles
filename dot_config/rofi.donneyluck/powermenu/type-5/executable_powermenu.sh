@@ -10,7 +10,7 @@
 ## style-1   style-2   style-3   style-4   style-5
 
 # Current Theme
-dir="$HOME/.config/rofi/powermenu/type-6"
+dir="$HOME/.config/rofi/powermenu/type-5"
 theme='style-1'
 
 # CMDs
@@ -32,14 +32,14 @@ no=''
 rofi_cmd() {
 	rofi -dmenu \
 		-p " $USER@$host" \
-		-mesg " Uptime: $uptime" \
+		-mesg " Last Login: $lastlogin |  Uptime: $uptime" \
 		-theme ${dir}/${theme}.rasi
 }
 
 # Confirmation CMD
 confirm_cmd() {
 	rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px;}' \
-		-theme-str 'mainbox {orientation: vertical; children: [ "message", "listview" ];}' \
+		-theme-str 'mainbox {children: [ "message", "listview" ];}' \
 		-theme-str 'listview {columns: 2; lines: 1;}' \
 		-theme-str 'element-text {horizontal-align: 0.5;}' \
 		-theme-str 'textbox {horizontal-align: 0.5;}' \
