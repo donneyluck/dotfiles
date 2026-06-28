@@ -1,0 +1,3 @@
+# Clash 订阅地址
+export CLASH_URL='https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=e783bb74c8de023891d7510289705f60'
+export CLASH_SECRET='tl503926'
