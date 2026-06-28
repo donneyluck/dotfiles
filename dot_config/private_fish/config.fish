@@ -2,14 +2,20 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-#if test -f /home/donney/.autojump/share/autojump/autojump.fish; . /home/donney/.autojump/share/autojump/autojump.fish; end
-if test -f /usr/share/fish/functions/autojump.fish; . /usr/share/fish/functions/autojump.fish; end
+[ -f /usr/share/autojump/autojump.fish ]; and source /usr/share/autojump/autojump.fish
 
 export EDITOR=vim
-export HTTP_PROXY='127.0.0.1:7890'
-export HTTPS_PROXY='127.0.0.1:7890'
-export ALL_PROXY='socks5://127.0.0.1:7891'
+#export HTTP_PROXY='127.0.0.1:7890'
+#export HTTPS_PROXY='127.0.0.1:7890'
+#export ALL_PROXY='socks5://127.0.0.1:7891'
 export TERM=xterm;
+
+# Proxy: only set when clash-verge is running (port 7897 listening)
+if test (ss -tlnp | grep ':7897' | wc -l) -gt 0
+    set -x HTTP_PROXY "http://127.0.0.1:7897"
+    set -x HTTPS_PROXY "http://127.0.0.1:7897"
+    set -x ALL_PROXY "socks5://127.0.0.1:7897"
+end
 
 alias ll 'ls -la'
 alias cd.. 'cd ..'
@@ -80,23 +86,23 @@ function open -d "open dir use pcmanfm"
    pcmanfm > /dev/null 2>&1
 end
 
-function proxy_on -d "open proxy"
-  export HTTP_PROXY='127.0.0.1:7890'
-  export HTTPS_PROXY='127.0.0.1:7890'
-  export ALL_PROXY='socks5://127.0.0.1:7891'
-  echo -e "proxy on"
-end
+#function proxy_on -d "open proxy"
+#  export HTTP_PROXY='127.0.0.1:7890'
+#  export HTTPS_PROXY='127.0.0.1:7890'
+#  export ALL_PROXY='socks5://127.0.0.1:7891'
+#  echo -e "proxy on"
+#end
 
-function proxy_off -d "close proxy"
-  unset HTTP_PROXY
-  unset HTTPS_PROXY
-  unset ALL_PROXY
-  echo -e "proxy off"
-end
+#function proxy_off -d "close proxy"
+#  unset HTTP_PROXY
+#  unset HTTPS_PROXY
+#  unset ALL_PROXY
+#  echo -e "proxy off"
+#end
 
-function proxy_update -d "update proxy"
-    wget -U "Mozilla/6.0" -O ~/.config/clash/config.yaml "https://to.runba.cyou/link/aLULMn4fDIB5trPa?clash=1"
-end
+#function proxy_update -d "update proxy"
+#    wget -U "Mozilla/6.0" -O ~/.config/clash/config.yaml "https://to.runba.cyou/link/aLULMn4fDIB5trPa?clash=1"
+#end
 
 function makescript
   history | head -1 > $argv[1]
@@ -158,3 +164,4 @@ function fish_user_key_bindings
 end
 
 thefuck --alias | source
+set -x PATH ~/.local/bin $PATH

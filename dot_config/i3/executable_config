@@ -39,8 +39,8 @@ exec --no-startup-id "xrandr --output Virtual1 --mode 1920x1080"
 exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id variety &
 #exec_always --no-startup-id "pkill conky; sleep 0.5; conky -c ~/.config/i3/left; conky -c ~/.config/i3/right"
-font pango:Font Awesome 6 Free 10
-#font pango:Diablo Heavy 12
+#font pango:Font Awesome 7 Free 10
+font pango:Diablo Heavy 12
 
 #floating模式下按住alt键进行拉拽
 floating_modifier $mod
@@ -60,10 +60,11 @@ bindsym $mod+t exec thunar
 #打开终端
 bindsym $mod+Return exec --no-startup-id alacritty
 #打开游览器
-bindsym $mod+w exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7890"
+#bindsym $mod+w exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7897"
+bindsym $mod+w exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7897"
 #bindsym $mod+w exec --no-startup-id xdotool search --class "google-chrome" windowactivate || google-chrome-stable
 #打开emacs
-bindsym $mod+e exec --no-startup-id wmctrl -xa emacs ||  /usr/local/bin/emacs
+#bindsym $mod+e exec --no-startup-id wmctrl -xa emacs || /usr/local/bin/emacs
 
 #运行rofi
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-6/launcher.sh
@@ -117,7 +118,7 @@ bindsym $mod+minus scratchpad show
 
 ######一些软件设置
 #开机自起compton
-exec --no-startup-id picom -b
+#exec --no-startup-id picom -b
 
 #开机自起fcitx
 #exec_always --no-startup-id fcitx
@@ -131,7 +132,11 @@ exec --no-startup-id picom -b
 
 #打开软件时自动移至相应工作区
 #for_window [class="Alacritty"] layout stacking
-assign [class="Alacritty"] $WS1
+# Alacritty (default title) → WS1
+assign [class="Alacritty" title="^Alacritty$"] $WS1
+
+# Claude Code (running in Alacritty) → auto-move to WS2 and focus
+for_window [class="Alacritty" title="✳ Claude Code"] move to workspace $WS2, focus
 assign [class="Emacs"] $WS2
 assign [class="Pcmanfm"] $WS5
 assign [class="firefox"] $WS3
@@ -146,6 +151,7 @@ assign [class="^DBeaver Ultimate$"] $WS4
 assign [class="^Navicat.*$"] $WS4
 assign [class="^RedisInsight-v2$"] $WS4
 assign [class="^QuickRedis$"] $WS4
+assign [class="clash-verge"] $WS4
 assign [class="^.*Nautilus$"] $WS5
 assign [class="^.*Thunar$"] $WS5
 assign [class="netease-cloud-music"] $WS7

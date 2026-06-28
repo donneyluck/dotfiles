@@ -12,8 +12,8 @@ cpu_avg_samples 2
 TEXT
 [
 #{ "full_text" : "", "color": "\#BADA55"},
-{ "full_text": "  wlan: ${exec curl icanhazip.com}    eth: ${addr enp0s17}", "color": "\#BADA55"},
-{ "full_text" : ${if_up enp0s17}"  ${upspeed enp0s17}/s  ${downspeed enp0s17}/s"${else}""${endif}, "color" : "\#94F397" },
+{ "full_text": "  wlan: ${exec curl icanhazip.com}    eth: ${addr ens32}", "color": "\#BADA55"},
+{ "full_text" : ${if_up ens32}"  ${upspeed ens32}/s  ${downspeed ens32}/s"${else}""${endif}, "color" : "\#94F397" },
 { "full_text" : ${if_up wlo1}"  ${upspeed wlo1}/s  ${downspeed wlo1}/s"${else}""${endif}, "color" : "\#94F397" },
 { "full_text" : "  cpu ${cpu cpu0}%" , "color" : "\#8BC3E7" },
 { "full_text" : " ${memperc}% (U: ${mem} , F: ${memfree}" , "color" : "\#B987D9" },
