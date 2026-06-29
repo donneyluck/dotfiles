@@ -1,6 +1,6 @@
 #************************************基本设置*******************************************
 #设置基本的工作区和热键(win)
-set $mod Mod1
+set $mod Mod4
 #set $WS1  1: 
 #set $WS2  2: 
 #set $WS3  3: 
@@ -33,9 +33,10 @@ set $WS9 "9: Anydesk"
 #启动输入法
 exec --no-startup-id "fcitx5 -d"
 #自动分屏
-exec --no-startup-id autotiling
+#exec --no-startup-id autotiling
+exec_always autotiling
 #调整分辨率
-exec --no-startup-id "xrandr --output Virtual1 --mode 1920x1080"
+exec --no-startup-id "xrandr --output Virtual-1 --mode 2048x1152"
 exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id variety &
 #exec_always --no-startup-id "pkill conky; sleep 0.5; conky -c ~/.config/i3/left; conky -c ~/.config/i3/right"
@@ -118,7 +119,7 @@ bindsym $mod+minus scratchpad show
 
 ######一些软件设置
 #开机自起compton
-#exec --no-startup-id picom -b
+exec --no-startup-id picom -b
 
 #开机自起fcitx
 #exec_always --no-startup-id fcitx
