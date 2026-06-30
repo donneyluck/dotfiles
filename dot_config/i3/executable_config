@@ -139,6 +139,7 @@ assign [class="Alacritty" title="^Alacritty$"] $WS1
 # Claude Code (running in Alacritty) → auto-move to WS2 and focus
 for_window [class="Alacritty" title="✳ Claude Code"] move to workspace $WS2, focus
 assign [class="Emacs"] $WS2
+assign [class="Code"] $WS2
 assign [class="Pcmanfm"] $WS5
 assign [class="firefox"] $WS3
 assign [class="^.*Google-chrome$"] $WS3
@@ -152,6 +153,7 @@ assign [class="^DBeaver Ultimate$"] $WS4
 assign [class="^Navicat.*$"] $WS4
 assign [class="^RedisInsight-v2$"] $WS4
 assign [class="^QuickRedis$"] $WS4
+assign [class="obsidian"] $WS4
 assign [class="clash-verge"] $WS4
 assign [class="^.*Nautilus$"] $WS5
 assign [class="^.*Thunar$"] $WS5
