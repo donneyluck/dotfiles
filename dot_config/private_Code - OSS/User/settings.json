@@ -1,0 +1,12 @@
+{
+    "editor.fontFamily": "Courier New",
+    "editor.fontWeight": "bold",
+    "editor.fontSize": 16,
+    "chat.editor.fontFamily": "Courier New",
+    "chat.editor.fontSize": 16,
+    "chat.editor.fontWeight": "bold",
+    "claudeCode.preferredLocation": "panel",
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.editor.enablePreview": false,
+    "editor.minimap.enabled": false
+}
