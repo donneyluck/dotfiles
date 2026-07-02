@@ -1,7 +1,7 @@
 general.import = ["/home/donney/.config/alacritty/themes/themes/tango_dark.toml"]
 
 [font]
-size = 13
+size = 16
 
 [font.bold]
 family = "Fira Code"
@@ -18,3 +18,8 @@ style = "Italic"
 [font.normal]
 family = "Fira Code"
 style = "Regular"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
