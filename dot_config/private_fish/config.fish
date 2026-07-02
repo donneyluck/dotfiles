@@ -82,8 +82,14 @@ function sshlist
     end
 end
 
-function open -d "open dir use pcmanfm"
-   pcmanfm > /dev/null 2>&1
+function open -d "open files/directories with default app"
+   if test (count $argv) -eq 0
+       echo "Usage: open <file|directory>"
+       return 1
+   end
+   for arg in $argv
+       xdg-open "$arg" > /dev/null 2>&1 &
+   end
 end
 
 #function proxy_on -d "open proxy"
