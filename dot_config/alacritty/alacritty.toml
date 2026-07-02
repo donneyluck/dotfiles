@@ -4,17 +4,17 @@ general.import = ["/home/donney/.config/alacritty/themes/themes/tango_dark.toml"
 size = 13
 
 [font.bold]
-family = "Courier New"
+family = "Fira Code"
 style = "Bold"
 
 [font.bold_italic]
-family = "Courier New"
+family = "Fira Code"
 style = "Bold Italic"
 
 [font.italic]
-family = "Courier New"
+family = "Fira Code"
 style = "Italic"
 
 [font.normal]
-family = "Courier New"
-style = "Bold"
+family = "Fira Code"
+style = "Regular"

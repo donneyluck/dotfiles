@@ -1,12 +1,14 @@
 {
-    "editor.fontFamily": "Courier New",
-    "editor.fontWeight": "bold",
+    "editor.fontFamily": "'Fira Code', 'Courier New'",
+    "editor.fontWeight": "normal",
     "editor.fontSize": 16,
-    "chat.editor.fontFamily": "Courier New",
+    "editor.fontLigatures": true,
+    "chat.editor.fontFamily": "'Fira Code', 'Courier New'",
     "chat.editor.fontSize": 16,
-    "chat.editor.fontWeight": "bold",
+    "chat.editor.fontWeight": "normal",
     "claudeCode.preferredLocation": "panel",
     "git.openRepositoryInParentFolders": "never",
     "workbench.editor.enablePreview": false,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Solarized Light"
 }
