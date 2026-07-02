@@ -35,7 +35,7 @@ with open(css_file, 'r') as f:
 
 new_css = re.sub(
     r'body\{[^}]*\}',
-    'body{display:flex;overscroll-behavior:none;font-size:var(--vscode-editor-font-size,16px);font-family:var(--vscode-editor-font-family,monospace);font-weight:var(--vscode-editor-font-weight,bold);flex:1;max-width:100%;margin:0;padding:0}',
+    'body{display:flex;overscroll-behavior:none;font-size:var(--vscode-editor-font-size,16px);font-family:var(--vscode-editor-font-family,monospace);font-weight:var(--vscode-editor-font-weight,normal);flex:1;max-width:100%;margin:0;padding:0}',
     css,
     count=1,
 )
