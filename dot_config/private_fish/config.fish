@@ -82,13 +82,13 @@ function sshlist
     end
 end
 
-function open -d "open files/directories with default app"
+function open -d "open directories with thunar"
    if test (count $argv) -eq 0
-       echo "Usage: open <file|directory>"
+       echo "Usage: open <directory>"
        return 1
    end
    for arg in $argv
-       xdg-open "$arg" > /dev/null 2>&1 &
+       thunar "$arg" > /dev/null 2>&1 &
    end
 end
 
