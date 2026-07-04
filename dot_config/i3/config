@@ -33,7 +33,7 @@ exec --no-startup-id variety &
 # ============================================================
 bindsym $mod+q         kill
 bindsym $mod+Return    exec --no-startup-id alacritty
-bindsym $mod+t         exec thunar
+bindsym $mod+t         exec --no-startup-id nautilus
 bindsym $mod+w         exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7897"
 bindsym $mod+d         exec --no-startup-id ~/.config/rofi/launchers/type-6/launcher.sh
 bindsym $mod+s         exec --no-startup-id ~/.config/rofi/powermenu/type-6/powermenu.sh
@@ -45,7 +45,7 @@ bindsym $mod+p         exec --no-startup-id ~/.config/rofi/applets/bin/screensho
 bindsym $mod+v         split v
 bindsym $mod+x         [urgent=latest] focus
 bindsym $mod+f         fullscreen toggle
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+slash floating toggle
 bindsym $mod+space     focus mode_toggle
 bindsym $mod+a         focus parent
 bindsym $mod+Shift+c   reload
@@ -153,7 +153,6 @@ assign  [class="^QuickRedis$"]         $WS4
 assign  [class="clash-verge"]          $WS4
 
 assign  [class="^.*Nautilus$"]    $WS5
-assign  [class="^.*Thunar$"]      $WS5
 
 assign  [class="Obsidian"]           $WS7
 assign  [class="netease-cloud-music"]  $WS7
