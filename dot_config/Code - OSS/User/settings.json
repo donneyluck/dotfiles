@@ -1,0 +1,14 @@
+{
+    "editor.fontFamily": "'Fira Code', 'Courier New'",
+    "editor.fontWeight": "normal",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true,
+    "chat.editor.fontFamily": "'Fira Code', 'Courier New'",
+    "chat.editor.fontSize": 16,
+    "chat.editor.fontWeight": "normal",
+    "claudeCode.preferredLocation": "panel",
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.editor.enablePreview": false,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Catppuccin Mocha"
+}
