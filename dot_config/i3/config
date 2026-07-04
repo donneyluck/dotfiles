@@ -45,7 +45,7 @@ bindsym $mod+p         exec --no-startup-id ~/.config/rofi/applets/bin/screensho
 bindsym $mod+v         split v
 bindsym $mod+x         [urgent=latest] focus
 bindsym $mod+f         fullscreen toggle
-bindsym $mod+Shift+slash floating toggle
+bindsym $mod+Shift+plus floating toggle
 bindsym $mod+space     focus mode_toggle
 bindsym $mod+a         focus parent
 bindsym $mod+Shift+c   reload
