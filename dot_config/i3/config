@@ -1,0 +1,255 @@
+# i3 config
+# ============================================================
+
+set $mod Mod4
+
+set $WS1 "1: Terminal"
+set $WS2 "2: Code"
+set $WS3 "3:  Browser"
+set $WS4 "4: Tool"
+set $WS5 "5: File"
+set $WS6 "6: Chat"
+set $WS7 "7: Obsidian"
+set $WS8 "8: Video"
+set $WS9 "9: Sunflower"
+set $WS0 "0: Game"
+
+floating_modifier $mod
+
+font pango:Diablo Heavy 12
+
+# ============================================================
+# 开机启动
+# ============================================================
+exec --no-startup-id fcitx5 -d
+exec --no-startup-id autotiling
+exec --no-startup-id "xrandr --output Virtual-1 --mode 2560x1600 --rate 59.99"
+exec --no-startup-id vmware-user-suid-wrapper
+exec --no-startup-id picom -b
+exec --no-startup-id variety &
+
+# ============================================================
+# 快捷键 - 应用启动
+# ============================================================
+bindsym $mod+q         kill
+bindsym $mod+Return    exec --no-startup-id alacritty
+bindsym $mod+t         exec thunar
+bindsym $mod+w         exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7897"
+bindsym $mod+d         exec --no-startup-id ~/.config/rofi/launchers/type-6/launcher.sh
+bindsym $mod+s         exec --no-startup-id ~/.config/rofi/powermenu/type-6/powermenu.sh
+bindsym $mod+p         exec --no-startup-id ~/.config/rofi/applets/bin/screenshot.sh
+
+# ============================================================
+# 快捷键 - 窗口操作
+# ============================================================
+bindsym $mod+v         split v
+bindsym $mod+x         [urgent=latest] focus
+bindsym $mod+f         fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space     focus mode_toggle
+bindsym $mod+a         focus parent
+bindsym $mod+Shift+c   reload
+bindsym $mod+Shift+e   exec "i3-nagbar -t warning -m '退出 i3?' -b '确认' 'i3-msg exit'"
+
+bindsym $mod+Shift+minus  move scratchpad
+bindsym $mod+minus        scratchpad show
+
+bindsym $mod+Tab         workspace back_and_forth
+bindsym $mod+Shift+Tab   move container to workspace back_and_forth
+
+# ============================================================
+# 焦点与窗口移动 (vim 风格)
+# ============================================================
+bindsym $mod+h         focus left
+bindsym $mod+j         focus down
+bindsym $mod+k         focus up
+bindsym $mod+l         focus right
+bindsym $mod+Left      focus left
+bindsym $mod+Down      focus down
+bindsym $mod+Up        focus up
+bindsym $mod+Right     focus right
+
+bindsym $mod+Shift+h   move left
+bindsym $mod+Shift+j   move down
+bindsym $mod+Shift+k   move up
+bindsym $mod+Shift+l   move right
+bindsym $mod+Shift+Left    move left
+bindsym $mod+Shift+Down    move down
+bindsym $mod+Shift+Up      move up
+bindsym $mod+Shift+Right   move right
+
+# ============================================================
+# 工作区操作
+# ============================================================
+bindsym $mod+1  workspace $WS1
+bindsym $mod+2  workspace $WS2
+bindsym $mod+3  workspace $WS3
+bindsym $mod+4  workspace $WS4
+bindsym $mod+5  workspace $WS5
+bindsym $mod+6  workspace $WS6
+bindsym $mod+7  workspace $WS7
+bindsym $mod+8  workspace $WS8
+bindsym $mod+9  workspace $WS9
+bindsym $mod+0  workspace $WS0
+
+bindsym $mod+shift+1  move container to workspace $WS1, workspace $WS1
+bindsym $mod+shift+2  move container to workspace $WS2, workspace $WS2
+bindsym $mod+shift+3  move container to workspace $WS3, workspace $WS3
+bindsym $mod+shift+4  move container to workspace $WS4, workspace $WS4
+bindsym $mod+shift+5  move container to workspace $WS5, workspace $WS5
+bindsym $mod+shift+6  move container to workspace $WS6, workspace $WS6
+bindsym $mod+shift+7  move container to workspace $WS7, workspace $WS7
+bindsym $mod+shift+8  move container to workspace $WS8, workspace $WS8
+bindsym $mod+shift+9  move container to workspace $WS9, workspace $WS9
+bindsym $mod+shift+0  move container to workspace $WS0, workspace $WS0
+
+# ============================================================
+# Caps Lock 模式
+# ============================================================
+mode "CAPSLOCK" {
+    bindsym Caps_Lock mode "default"
+}
+bindsym Caps_Lock mode "CAPSLOCK"
+
+# ============================================================
+# 窗口尺寸调整模式
+# ============================================================
+mode "resize" {
+    bindsym h          resize shrink width  10 px or 10 ppt
+    bindsym j          resize grow   height 10 px or 10 ppt
+    bindsym k          resize shrink height 10 px or 10 ppt
+    bindsym l          resize grow   width  10 px or 10 ppt
+
+    bindsym Left       resize shrink width  10 px or 10 ppt
+    bindsym Down       resize grow   height 10 px or 10 ppt
+    bindsym Up         resize shrink height 10 px or 10 ppt
+    bindsym Right      resize grow   width  10 px or 10 ppt
+
+    bindsym Return     mode "default"
+    bindsym Escape     mode "default"
+}
+bindsym $mod+Shift+r  mode "resize"
+
+# ============================================================
+# 窗口规则 - 自动分配到工作区
+# ============================================================
+assign  [class="Alacritty" title="^Alacritty$"]   $WS1
+for_window  [class="Alacritty" title="✳ Claude Code"]  move to workspace $WS2, focus
+assign  [class="(?i)code.*"]   $WS2
+assign  [class="Emacs"]        $WS2
+
+assign  [class="^.*Google-chrome$"]  $WS3
+
+assign  [class="Shutter"]              $WS4
+assign  [class="Zathura"]              $WS4
+assign  [class="Calibre"]              $WS4
+assign  [class="^WPS.*$"]              $WS4
+assign  [class="^DesktopEditors$"]     $WS4
+assign  [class="^Postman$"]            $WS4
+assign  [class="^DBeaver Ultimate$"]   $WS4
+assign  [class="^Navicat.*$"]          $WS4
+assign  [class="^RedisInsight-v2$"]    $WS4
+assign  [class="^QuickRedis$"]         $WS4
+assign  [class="clash-verge"]          $WS4
+
+assign  [class="^.*Nautilus$"]    $WS5
+assign  [class="^.*Thunar$"]      $WS5
+
+assign  [class="Obsidian"]           $WS7
+assign  [class="netease-cloud-music"]  $WS7
+assign  [class="Lollypop"]             $WS7
+assign  [class="ieaseMusic"]           $WS7
+
+assign  [class="VirtualBox"]       $WS8
+
+assign  [class="^.*cataclysm.*$"]  $WS0
+
+# ============================================================
+# 主题 - 窗口颜色
+# ============================================================
+client.focused            #3297fd #333333 #FFFFFF #333333
+client.focused_inactive   #999999 #999999 #FFFFFF #3399FF
+client.unfocused          #999999 #000000 #FFFFFF #3399FF
+client.urgent             #990000 #990000 #FFFFFF #990000
+client.placeholder        #000000 #000000 #FFFFFF #000000
+client.background         #FFFFFF
+
+# ============================================================
+# i3bar 设置
+# ============================================================
+bar {
+    i3bar_command  i3bar -t
+    height         38
+    tray_output    none
+    status_command ~/.config/i3/jconky
+    position       bottom
+    strip_workspace_numbers  yes
+    separator_symbol         "  "
+
+    colors {
+        background         #101010E6
+        statusline         #FFFFFF
+        separator          #3399FF
+
+        focused_workspace  #FF0000 #11111100 #FFFFFF
+        active_workspace   #FFFFFF #FFFFFF00 #FFFFFF
+        inactive_workspace #111111 #11111100 #FFFFFF
+        urgent_workspace   #990000 #11111100 #FFFFFF
+        binding_mode       #990000 #99000000 #FFFFFF
+    }
+}
+
+# ============================================================
+# 电源管理
+# ============================================================
+set $mode_system  lock(L) logout(O) reboot(R) shutdown(S) i3-restart(I) cancel(Esc)
+bindsym $mod+Shift+s  mode "$mode_system"
+mode "$mode_system" {
+    bindsym l  exec --no-startup-id i3lock-fancy -t "Don`t touch my manjaro", mode "default"
+    bindsym o  exec --no-startup-id i3-msg exit,                  mode "default"
+    bindsym r  exec --no-startup-id systemctl reboot,            mode "default"
+    bindsym s  exec --no-startup-id systemctl poweroff,         mode "default"
+    bindsym i  restart,                                          mode "default"
+    bindsym Escape  mode "default"
+}
+
+# ============================================================
+# i3-gaps
+# ============================================================
+for_window  [class="^.*$"]  border pixel 3
+gaps  inner  8
+gaps  outer  6
+
+set $mode_gaps         Gaps: (o) outer, (i) inner
+set $mode_gaps_outer   Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner   Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g   mode "$mode_gaps"
+
+mode "$mode_gaps" {
+    bindsym o      mode "$mode_gaps_outer"
+    bindsym i      mode "$mode_gaps_inner"
+    bindsym Escape  mode "default"
+    bindsym Return     mode "default"
+}
+
+mode "$mode_gaps_inner" {
+    bindsym plus          gaps inner current plus 5
+    bindsym minus         gaps inner current minus 5
+    bindsym 0             gaps inner current set 0
+    bindsym Shift+plus    gaps inner all plus 5
+    bindsym Shift+minus   gaps inner all minus 5
+    bindsym Shift+0       gaps inner all set 0
+    bindsym Return        mode "default"
+    bindsym Escape        mode "default"
+}
+
+mode "$mode_gaps_outer" {
+    bindsym plus          gaps outer current plus 5
+    bindsym minus         gaps outer current minus 5
+    bindsym 0             gaps outer current set 0
+    bindsym Shift+plus    gaps outer all plus 5
+    bindsym Shift+minus   gaps outer all minus 5
+    bindsym Shift+0       gaps outer all set 0
+    bindsym Return        mode "default"
+    bindsym Escape        mode "default"
+}
