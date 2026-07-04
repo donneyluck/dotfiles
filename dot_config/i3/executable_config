@@ -186,7 +186,7 @@ bar {
     separator_symbol         "  "
 
     colors {
-        background         #10101030
+        background         #101010E6
         statusline         #FFFFFF
         separator          #3399FF
 
