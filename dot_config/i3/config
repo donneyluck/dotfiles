@@ -135,6 +135,7 @@ bindsym $mod+Shift+r  mode "resize"
 # ============================================================
 assign  [class="Alacritty" title="^Alacritty$"]   $WS1
 for_window  [class="Alacritty" title="✳ Claude Code"]  move to workspace $WS2, focus
+for_window  [class="clawd-on-desk"]  sticky enable
 assign  [class="(?i)code.*"]   $WS2
 assign  [class="Emacs"]        $WS2
 
