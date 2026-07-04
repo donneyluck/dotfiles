@@ -1,6 +1,6 @@
 #************************************基本设置*******************************************
 #设置基本的工作区和热键(win)
-set $mod Mod4
+set $mod Mod1
 #set $WS1  1: 
 #set $WS2  2: 
 #set $WS3  3: 
@@ -18,11 +18,11 @@ set $WS3 "3:  Browser"
 set $WS4 "4: Tool"
 set $WS5 "5: File"
 set $WS6 "6: Chat"
-set $WS7 "7: Music"
+set $WS7 "7: OBSIDIAN"
 set $WS8 "8: Video"
 #set $WS8 "8: Graphic"
 set $WS0 "0: Game"
-set $WS9 "9: Anydesk"
+set $WS9 "9: Sunflower"
 
 #exec --no-startup-id "i3-msg 'workspace $WS1; append_layout ~/.config/i3/workspace-1.json;exec alacritty; exec alacritty; exec alacritty;exec chromium --proxy-server=\"192.168.101.66:7890\";exec emacs'"
 #背景和文字
@@ -33,10 +33,9 @@ set $WS9 "9: Anydesk"
 #启动输入法
 exec --no-startup-id "fcitx5 -d"
 #自动分屏
-#exec --no-startup-id autotiling
-exec_always autotiling
+exec --no-startup-id autotiling
 #调整分辨率
-exec --no-startup-id "xrandr --output Virtual-1 --mode 2048x1152"
+exec --no-startup-id "xrandr --output Virtual1 --mode 1920x1080"
 exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id variety &
 #exec_always --no-startup-id "pkill conky; sleep 0.5; conky -c ~/.config/i3/left; conky -c ~/.config/i3/right"
@@ -119,7 +118,7 @@ bindsym $mod+minus scratchpad show
 
 ######一些软件设置
 #开机自起compton
-exec --no-startup-id picom -b
+#exec --no-startup-id picom -b
 
 #开机自起fcitx
 #exec_always --no-startup-id fcitx
@@ -138,10 +137,8 @@ assign [class="Alacritty" title="^Alacritty$"] $WS1
 
 # Claude Code (running in Alacritty) → auto-move to WS2 and focus
 for_window [class="Alacritty" title="✳ Claude Code"] move to workspace $WS2, focus
+assign [class="(?i)code.*"]  $WS2
 assign [class="Emacs"] $WS2
-assign [class="code-oss"] $WS2
-assign [class="Pcmanfm"] $WS5
-assign [class="firefox"] $WS3
 assign [class="^.*Google-chrome$"] $WS3
 assign [class="Shutter"] $WS4
 assign [class="Zathura"] $WS4
@@ -153,7 +150,6 @@ assign [class="^DBeaver Ultimate$"] $WS4
 assign [class="^Navicat.*$"] $WS4
 assign [class="^RedisInsight-v2$"] $WS4
 assign [class="^QuickRedis$"] $WS4
-assign [class="obsidian"] $WS4
 assign [class="clash-verge"] $WS4
 assign [class="^.*Nautilus$"] $WS5
 assign [class="^.*Thunar$"] $WS5
@@ -161,7 +157,6 @@ assign [class="netease-cloud-music"] $WS7
 assign [class="Lollypop"] $WS7
 assign [class="ieaseMusic"] $WS7
 assign [class="VirtualBox"] $WS8
-assign [class="Anydesk"] $WS9
 assign [class="^.*cataclysm.*$"] $WS0
 
 #**************************************焦点和窗口移动**************************************
