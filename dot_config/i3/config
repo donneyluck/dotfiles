@@ -155,7 +155,7 @@ assign  [class="clash-verge"]          $WS4
 
 assign  [class="^.*Nautilus$"]    $WS5
 
-assign  [class="Obsidian"]           $WS7
+assign [class="obsidian"] $WS7
 assign  [class="netease-cloud-music"]  $WS7
 assign  [class="Lollypop"]             $WS7
 assign  [class="ieaseMusic"]           $WS7
