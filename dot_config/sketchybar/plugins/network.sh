@@ -1,13 +1,16 @@
 #!/bin/bash
-# network.sh - show public IP + local network info (matching conky output)
-# conky:   wlan: ${exec curl icanhazip.com}    eth: ${addr ens33}
+# network.sh - show network status（WiFi or Ethernet）
 
-# Public IP (with timeout to avoid hanging)
-PUBIP=$(curl -s --max-time 3 icanhazip.com 2>/dev/null)
-[ -z "$PUBIP" ] && PUBIP="N/A"
-
-# Local IP (WiFi/en0 first, fallback to en1)
-LOCALIP=$(ipconfig getifaddr en0 2>/dev/null || ipconfig getifaddr en1 2>/dev/null)
-[ -z "$LOCALIP" ] && LOCALIP="N/A"
-
-echo "  pub:${PUBIP}  loc:${LOCALIP}"
+# Try WiFi first
+SSID=$(networksetup -getairportnetwork en0 2>/dev/null | sed 's/^.*: //' 2>/dev/null)
+if [ -n "$SSID" ] && [ "$SSID" != "You are not associated with an AirPort network." ]; then
+  echo "$SSID"
+else
+  # Fallback: show local IP
+  IP=$(ipconfig getifaddr en0 2>/dev/null || ipconfig getifaddr en1 2>/dev/null)
+  if [ -n "$IP" ]; then
+    echo "$IP"
+  else
+    echo "N/A"
+  fi
+fi

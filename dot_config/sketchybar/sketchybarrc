@@ -1,36 +1,35 @@
 #!/bin/bash
 FONT="FiraCode Nerd Font:Bold:13.0"
-PLUGINS="$HOME/.config/sketchybar/plugins"
 
 sketchybar --bar height=28 position=top color=0xff1e1e2e \
                  padding_left=6 padding_right=6 \
                  font_smoothing=on
 
-# ── Workspaces (9 items, text-only highlight) ──
+# ── Workspaces (text-only highlight) ──
 for i in $(seq 1 9); do
   sketchybar --add item ws_$i left \
              --set ws_$i drawing=on \
                          icon.drawing=off \
                          label.color=0xff585b70 \
                          label.font="$FONT" \
-                         label.padding_left=3 \
-                         label.padding_right=3 \
+                         label.padding_left=4 \
+                         label.padding_right=4 \
                          click_script="yabai -m space --focus $i" \
-                         script="bash $PLUGINS/workspaces.sh" \
+                         script="bash $HOME/.config/sketchybar/plugins/workspaces.sh" \
                          update_freq=0
 done
 
 sketchybar --subscribe workspaces space_changed window_focused
 
-# ── Window Title ──
+# ── Window Title ──────────────────────────────────────────
 sketchybar --add item window_title left \
            --set window_title drawing=on \
                            icon.drawing=off \
                            label.color=0xffa6adc8 \
-                           label.max_chars=50 \
+                           label.max_chars=60 \
                            label.font="$FONT"
 
-# ── CPU ──
+# ── CPU ───────────────────────────────────────────────────
 sketchybar --add item cpu right \
            --set cpu drawing=on \
                        icon= \
@@ -38,25 +37,21 @@ sketchybar --add item cpu right \
                        icon.padding_left=4 \
                        icon.font="$FONT" \
                        label.color=0xffffffff \
-                       label.padding_right=6 \
-                       label.font="$FONT" \
-                       script="bash $PLUGINS/cpu.sh" \
-                       update_freq=2
+                       label.padding_right=8 \
+                       label.font="$FONT"
 
-# ── Memory ──
-sketchybar --add item memory right \
-           --set memory drawing=on \
-                         icon= \
-                         icon.color=0xffb987d9 \
+# ── Network ───────────────────────────────────────────────
+sketchybar --add item network right \
+           --set network drawing=on \
+                         icon= \
+                         icon.color=0xff94e2d5 \
                          icon.padding_left=4 \
                          icon.font="$FONT" \
                          label.color=0xffffffff \
-                         label.padding_right=6 \
-                         label.font="$FONT" \
-                         script="bash $PLUGINS/memory.sh" \
-                         update_freq=5
+                         label.padding_right=8 \
+                         label.font="$FONT"
 
-# ── Clock ──
+# ── Clock ─────────────────────────────────────────────────
 sketchybar --add item clock right \
            --set clock drawing=on \
                         icon= \
@@ -64,6 +59,4 @@ sketchybar --add item clock right \
                         icon.font="$FONT" \
                         label.color=0xffffffff \
                         label.padding_right=6 \
-                        label.font="$FONT" \
-                        script="bash $PLUGINS/clock.sh" \
-                        update_freq=30
+                        label.font="$FONT"

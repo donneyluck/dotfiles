@@ -1,6 +1,5 @@
 #!/bin/bash
-# cpu.sh - show CPU usage (matching conky: cpu ${cpu cpu0}%)
-# Use top for a more accurate instantaneous CPU percentage
+# cpu.sh - show CPU usage
 
-CPU=$(top -l 1 | grep "CPU usage" | awk '{print int($3)}')
-echo "${CPU}%"
+TOP=$(ps aux | awk 'NR>1 {sum += $3} END {printf "%.0f%%", sum/NR}')
+echo "$TOP"

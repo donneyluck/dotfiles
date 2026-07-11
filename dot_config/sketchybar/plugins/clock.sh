@@ -1,5 +1,4 @@
 #!/bin/bash
-# clock.sh - show date and time (matching conky)
-# conky:  ${time %Y/%m/%d %a}   ${time %H:%M}
+# clock.sh - show date and time
 
-date "+%Y/%m/%d %a %H:%M"
+date "+%m-%d %H:%M"
