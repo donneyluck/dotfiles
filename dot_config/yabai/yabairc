@@ -6,7 +6,7 @@
 
 # --- Global ---
 yabai -m config layout                       bsp
-yabai -m config top_padding                  10
+yabai -m config top_padding                  32
 yabai -m config bottom_padding               10
 yabai -m config left_padding                 10
 yabai -m config right_padding                10
@@ -67,7 +67,10 @@ yabai -m rule --add app="^Finder$" space=5
 yabai -m rule --add app="^Obsidian$" space=7
 yabai -m rule --add app="^VLC$" space=8
 yabai -m rule --add app="^IINA$" space=8
+yabai -m rule --add app="^Sunlogin" space=8
+yabai -m rule --add app="^向日葵$" space=8
 yabai -m rule --add app="^Clash Verge$" space=6
 
-# --- Signals (optional, for borders/effects) ---
-# yabai -m signal --add event=window_focused action="..."
+# --- Signals (tell sketchybar when things change) ---
+yabai -m signal --add event=space_changed action="sketchybar --trigger space_changed" label="space_changed" --follow
+yabai -m signal --add event=window_focused action="sketchybar --trigger window_focused" label="window_focused"
