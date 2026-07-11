@@ -76,8 +76,8 @@ cmd - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 cmd + shift - e : yabai --restart-service
 
 # --- Quick launch ---
-cmd - return : open -na Alacritty
-cmd - w : open -na "Google Chrome" --args --proxy-server="127.0.0.1:7897"
+cmd - return : open -na Ghostty
+cmd - w : if ! pgrep -x "Google Chrome" > /dev/null; then open -na "Google Chrome" --args --proxy-server="127.0.0.1:7897"; else osascript -e 'tell application "Google Chrome" to activate'; fi
 cmd - t : open -a Finder
 cmd - q : yabai -m window --close
 
