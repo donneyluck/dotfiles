@@ -1,0 +1,102 @@
+# ============================================
+# skhd config — matches i3 / Komorebi bindings
+# ============================================
+
+# mod = cmd (hyper)
+mod = cmd
+
+# --- Focus (vim style) ---
+mod - h : yabai -m window --focus west
+mod - j : yabai -m window --focus south
+mod - k : yabai -m window --focus north
+mod - l : yabai -m window --focus east
+
+# --- Move windows ---
+mod - shift - h : yabai -m window --swap west
+mod - shift - j : yabai -m window --swap south
+mod - shift - k : yabai -m window --swap north
+mod - shift - l : yabai -m window --swap east
+
+# --- Resize ---
+mod - alt - h : yabai -m window --resize left:-50:0; yabai -m window --resize right:-50:0
+mod - alt - j : yabai -m window --resize bottom:0:50; yabai -m window --resize top:0:50
+mod - alt - k : yabai -m window --resize top:0:-50; yabai -m window --resize bottom:0:-50
+mod - alt - l : yabai -m window --resize right:50:0; yabai -m window --resize left:50:0
+
+# --- Alternative resize with =/- ---
+mod - equal : yabai -m window --resize right:50:0; yabai -m window --resize left:50:0
+mod - dash : yabai -m window --resize right:-50:0; yabai -m window --resize left:-50:0
+
+# --- Toggle float ---
+mod - shift - space : yabai -m window --toggle float; yabai -m window --toggle border
+
+# --- Fullscreen ---
+mod - f : yabai -m window --toggle zoom-fullscreen
+
+# --- Split orientation ---
+mod - v : yabai -m window --toggle split
+
+# --- Layout cycle (bsp -> float -> stack) ---
+mod - e : yabai -m space --layout bsp
+mod - s : yabai -m space --layout stack
+mod - d : yabai -m space --layout float
+
+# --- Balance ---
+mod - shift - equal : yabai -m space --balance
+
+# --- Workspaces (same emoji labels as i3/komorebi) ---
+mod - 1 : yabai -m space --focus 1
+mod - 2 : yabai -m space --focus 2
+mod - 3 : yabai -m space --focus 3
+mod - 4 : yabai -m space --focus 4
+mod - 5 : yabai -m space --focus 5
+mod - 6 : yabai -m space --focus 6
+mod - 7 : yabai -m space --focus 7
+mod - 8 : yabai -m space --focus 8
+mod - 9 : yabai -m space --focus 9
+mod - 0 : yabai -m space --focus 10
+
+# --- Move window to workspace ---
+mod - shift - 1 : yabai -m window --space 1
+mod - shift - 2 : yabai -m window --space 2
+mod - shift - 3 : yabai -m window --space 3
+mod - shift - 4 : yabai -m window --space 4
+mod - shift - 5 : yabai -m window --space 5
+mod - shift - 6 : yabai -m window --space 6
+mod - shift - 7 : yabai -m window --space 7
+mod - shift - 8 : yabai -m window --space 8
+mod - shift - 9 : yabai -m window --space 9
+mod - shift - 0 : yabai -m window --space 10
+
+# --- Create/destroy spaces ---
+mod - c : yabai -m space --create
+mod - shift - c : yabai -m space --destroy
+
+# --- Rotate / Mirror ---
+mod - r : yabai -m space --rotate 90
+mod - shift - r : yabai -m space --mirror y-axis
+
+# --- Toggle gaps ---
+mod - g : yabai -m space --toggle padding; yabai -m space --toggle gap
+
+# --- Restart yabai ---
+mod - shift - e : yabai --restart-service
+
+# --- Focus follows mouse (optional) ---
+# mod - z : yabai -m config mouse_follows_focus on
+
+# --- Quick launch (matching i3 launchers) ---
+mod - return : open -na Alacritty || open -na Terminal
+mod - w : open -na "Google Chrome" --args --proxy-server="127.0.0.1:7897"
+mod - t : open -a Finder
+mod - d : open -a "Raycast" || open -a "Spotlight"
+mod - q : yabai -m window --close
+mod - shift - q : yabai -m window --close
+
+# --- Scratchpad (quick hide/show) ---
+mod - shift - minus : yabai -m window --scratchpad hide
+mod - minus : yabai -m window --scratchpad show
+
+# --- Stack navigation ---
+mod - ctrl - k : yabai -m window --focus stack.next
+mod - ctrl - j : yabai -m window --focus stack.prev
