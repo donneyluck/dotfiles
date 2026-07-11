@@ -72,8 +72,23 @@ cmd + shift - r : yabai -m space --mirror y-axis
 # --- Toggle gaps ---
 cmd - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
-# --- Restart yabai ---
+# --- Restore yabai ---
 cmd + shift - e : yabai --restart-service
+
+# --- Herdr workspace navigation (option+number) ---
+alt - 1 : herdr workspace focus 1
+alt - 2 : herdr workspace focus 2
+alt - 3 : herdr workspace focus 3
+alt - 4 : herdr workspace focus 4
+alt - 5 : herdr workspace focus 5
+alt - 6 : herdr workspace focus 6
+alt - 7 : herdr workspace focus 7
+alt - 8 : herdr workspace focus 8
+alt - 9 : herdr workspace focus 9
+alt - 0 : herdr workspace focus 10
+
+# --- Herdr create workspace (alt+n) ---
+alt - n : herdr workspace create
 
 # --- Quick launch ---
 cmd - return : open -na Ghostty
