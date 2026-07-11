@@ -1,5 +1,6 @@
 #!/bin/bash
 FONT="FiraCode Nerd Font:Bold:13.0"
+PLUGINS="$HOME/.config/sketchybar/plugins"
 
 sketchybar --bar height=28 position=top color=0xff1e1e2e \
                  padding_left=6 padding_right=6 \
@@ -15,7 +16,7 @@ for i in $(seq 1 9); do
                          label.padding_left=4 \
                          label.padding_right=4 \
                          click_script="yabai -m space --focus $i" \
-                         script="bash $HOME/.config/sketchybar/plugins/workspaces.sh" \
+                         script="bash $PLUGINS/workspaces.sh" \
                          update_freq=0
 done
 
@@ -29,7 +30,7 @@ sketchybar --add item window_title left \
                            label.max_chars=60 \
                            label.font="$FONT"
 
-# ── CPU ───────────────────────────────────────────────────
+# ── CPU (conky:  cpu ${cpu cpu0}%) ──────────────────────
 sketchybar --add item cpu right \
            --set cpu drawing=on \
                        icon= \
@@ -38,20 +39,37 @@ sketchybar --add item cpu right \
                        icon.font="$FONT" \
                        label.color=0xffffffff \
                        label.padding_right=8 \
-                       label.font="$FONT"
+                       label.font="$FONT" \
+                       script="bash $PLUGINS/cpu.sh" \
+                       update_freq=2
 
-# ── Network ───────────────────────────────────────────────
+# ── Memory (conky:  memperc% U: mem F: memfree) ────────
+sketchybar --add item memory right \
+           --set memory drawing=on \
+                         icon= \
+                         icon.color=0xffb987d9 \
+                         icon.padding_left=4 \
+                         icon.font="$FONT" \
+                         label.color=0xffffffff \
+                         label.padding_right=8 \
+                         label.font="$FONT" \
+                         script="bash $PLUGINS/memory.sh" \
+                         update_freq=5
+
+# ── Network (conky:  wlan:pubIP eth:localIP) ────────────
 sketchybar --add item network right \
            --set network drawing=on \
-                         icon= \
+                         icon= \
                          icon.color=0xff94e2d5 \
                          icon.padding_left=4 \
                          icon.font="$FONT" \
                          label.color=0xffffffff \
                          label.padding_right=8 \
-                         label.font="$FONT"
+                         label.font="$FONT" \
+                         script="bash $PLUGINS/network.sh" \
+                         update_freq=10
 
-# ── Clock ─────────────────────────────────────────────────
+# ── Clock (conky:  %Y/%m/%d %a   %H:%M) ─────────────
 sketchybar --add item clock right \
            --set clock drawing=on \
                         icon= \
@@ -59,4 +77,6 @@ sketchybar --add item clock right \
                         icon.font="$FONT" \
                         label.color=0xffffffff \
                         label.padding_right=6 \
-                        label.font="$FONT"
+                        label.font="$FONT" \
+                        script="bash $PLUGINS/clock.sh" \
+                        update_freq=30
