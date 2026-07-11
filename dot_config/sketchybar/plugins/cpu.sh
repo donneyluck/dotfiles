@@ -1,5 +1,3 @@
 #!/bin/bash
-# cpu.sh - show CPU usage
-
-TOP=$(ps aux | awk 'NR>1 {sum += $3} END {printf "%.0f%%", sum/NR}')
-echo "$TOP"
+# cpu.sh - total CPU usage = user + sys (matches conky ${cpu cpu0}%)
+top -l 1 | grep "CPU usage" | awk '{printf "%.0f%%", $3 + $5}'

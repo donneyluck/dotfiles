@@ -1,9 +1,16 @@
 #!/bin/bash
 FONT="FiraCode Nerd Font:Bold:13.0"
+PLUGINS="$HOME/.config/sketchybar/plugins"
 
 sketchybar --bar height=28 position=top color=0xff1e1e2e \
                  padding_left=6 padding_right=6 \
                  font_smoothing=on
+
+# ── Background polls (like conky loop) ──
+# CPU: --set label via external poll (avoids breaking workspace signals)
+if ! pgrep -f "sketchybar/plugins/cpu.sh" > /dev/null; then
+  nohup bash -c "while true; do CPU=\$(bash $PLUGINS/cpu.sh); sketchybar --set cpu label=\"\$CPU\" 2>/dev/null; sleep 3; done" > /dev/null 2>&1 &
+fi
 
 # ── Workspaces (text-only highlight) ──
 for i in $(seq 1 9); do
@@ -38,7 +45,9 @@ sketchybar --add item cpu right \
                        icon.font="$FONT" \
                        label.color=0xffffffff \
                        label.padding_right=8 \
-                       label.font="$FONT"
+                       label.font="$FONT" \
+                       script="bash $HOME/.config/sketchybar/plugins/cpu.sh" \
+                       update_freq=2
 
 # ── Network ───────────────────────────────────────────────
 sketchybar --add item network right \

@@ -82,8 +82,8 @@ cmd - t : open -a Finder
 cmd - q : yabai -m window --close
 
 # --- Scratchpad ---
-cmd + shift - minus : yabai -m window --scratchpad hide
-cmd - minus : yabai -m window --scratchpad show
+cmd + shift - 0x1B : yabai -m window --scratchpad hide
+cmd - 0x1B : yabai -m window --scratchpad show
 
 # --- Stack navigation ---
 cmd + ctrl - k : yabai -m window --focus stack.next
