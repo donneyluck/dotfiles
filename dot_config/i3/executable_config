@@ -3,7 +3,7 @@
 
 set $mod Mod1
 
-set $WS1 "1: Terminal"
+set $WS1 "1:👻 GHOSTTY"
 set $WS2 "2: Code"
 set $WS3 "3:  Browser"
 set $WS4 "4: Tool"
@@ -32,7 +32,8 @@ exec --no-startup-id variety &
 # 快捷键 - 应用启动
 # ============================================================
 bindsym $mod+q         kill
-bindsym $mod+Return    exec --no-startup-id alacritty
+bindsym $mod+Return    exec --no-startup-id ghostty
+# bindsym $mod+Return    exec --no-startup-id alacritty
 bindsym $mod+t         exec thunar
 # bindsym $mod+w         exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7897"
 bindsym $mod+d         exec --no-startup-id ~/.config/rofi/launchers/type-6/launcher.sh
@@ -133,8 +134,9 @@ bindsym $mod+Shift+r  mode "resize"
 # ============================================================
 # 窗口规则 - 自动分配到工作区
 # ============================================================
-assign  [class="Alacritty" title="^Alacritty$"]   $WS1
-for_window  [class="Alacritty" title="✳ Claude Code"]  move to workspace $WS2, focus
+# assign  [class="Alacritty" title="^Alacritty$"]   $WS1
+assign  [class="com.mitchellh.ghostty"]            $WS1
+# for_window  [class="Alacritty" title="✳ Claude Code"]  move to workspace $WS2, focus
 assign  [class="(?i)code.*"]   $WS2
 assign  [class="Emacs"]        $WS2
 
