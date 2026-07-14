@@ -150,7 +150,8 @@ assign  [class="^DBeaver Ultimate$"]   $WS4
 assign  [class="^Navicat.*$"]          $WS4
 assign  [class="^RedisInsight-v2$"]    $WS4
 assign  [class="^QuickRedis$"]         $WS4
-assign  [class="clash-verge"]          $WS4
+assign  [class="^clash-verge$"]          $WS4
+assign  [class="^Cc-switch$"]           $WS4
 
 assign  [class="^.*Nautilus$"]    $WS5
 assign  [class="^.*Thunar$"]      $WS5
