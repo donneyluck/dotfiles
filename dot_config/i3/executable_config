@@ -6,9 +6,9 @@ set $mod Mod1
 set $WS1 "1:👻 GHOSTTY"
 set $WS2 "2: Code"
 set $WS3 "3:  Browser"
-set $WS4 "4: Tool"
-set $WS5 "5: File"
-set $WS6 "6: Chat"
+set $WS4 "4: Chat"
+set $WS5 "5: Tool"
+set $WS6 "6: File"
 set $WS7 "7: Obsidian"
 set $WS8 "8: Video"
 set $WS9 "9: Sunflower"
@@ -144,21 +144,21 @@ assign  [class="Emacs"]        $WS2
 
 assign  [class="^.*Google-chrome$"]  $WS3
 
-assign  [class="Shutter"]              $WS4
-assign  [class="Zathura"]              $WS4
-assign  [class="Calibre"]              $WS4
-assign  [class="^WPS.*$"]              $WS4
-assign  [class="^DesktopEditors$"]     $WS4
-assign  [class="^Postman$"]            $WS4
-assign  [class="^DBeaver Ultimate$"]   $WS4
-assign  [class="^Navicat.*$"]          $WS4
-assign  [class="^RedisInsight-v2$"]    $WS4
-assign  [class="^QuickRedis$"]         $WS4
-assign  [class="^clash-verge$"]          $WS4
-assign  [class="^Cc-switch$"]           $WS4
+assign  [class="Shutter"]              $WS5
+assign  [class="Zathura"]              $WS5
+assign  [class="Calibre"]              $WS5
+assign  [class="^WPS.*$"]              $WS5
+assign  [class="^DesktopEditors$"]     $WS5
+assign  [class="^Postman$"]            $WS5
+assign  [class="^DBeaver Ultimate$"]   $WS5
+assign  [class="^Navicat.*$"]          $WS5
+assign  [class="^RedisInsight-v2$"]    $WS5
+assign  [class="^QuickRedis$"]         $WS5
+assign  [class="^clash-verge$"]          $WS5
+assign  [class="^Cc-switch$"]           $WS5
 
-assign  [class="^.*Nautilus$"]    $WS5
-assign  [class="^.*Thunar$"]      $WS5
+assign  [class="^.*Nautilus$"]    $WS6
+assign  [class="^.*Thunar$"]      $WS6
 
 assign  [class="netease-cloud-music"]  $WS7
 assign  [class="Lollypop"]             $WS7
