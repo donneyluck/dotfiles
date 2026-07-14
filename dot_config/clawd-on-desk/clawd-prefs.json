@@ -1,7 +1,7 @@
 {
   "version": 12,
-  "x": 2282,
-  "y": 713,
+  "x": 62,
+  "y": 241,
   "positionSaved": true,
   "positionThemeId": "clawd",
   "positionVariantId": "default",
@@ -9,20 +9,20 @@
     "bounds": {
       "x": 0,
       "y": 0,
-      "width": 2560,
-      "height": 1600
+      "width": 1920,
+      "height": 1080
     },
     "workArea": {
       "x": 0,
       "y": 0,
-      "width": 2560,
-      "height": 1600
+      "width": 1920,
+      "height": 1080
     },
     "id": 70,
     "scaleFactor": 1
   },
-  "savedPixelWidth": 230,
-  "savedPixelHeight": 230,
+  "savedPixelWidth": 173,
+  "savedPixelHeight": 173,
   "savedPixelWorkArea": null,
   "size": "P:9",
   "miniMode": false,
@@ -83,8 +83,8 @@
       "notificationHookEnabled": true
     },
     "codex": {
-      "integrationInstalled": true,
-      "enabled": true,
+      "integrationInstalled": false,
+      "enabled": false,
       "permissionsEnabled": true,
       "notificationHookEnabled": true,
       "permissionMode": "intercept",
@@ -178,9 +178,17 @@
       "enabled": false,
       "permissionsEnabled": false,
       "notificationHookEnabled": true
+    },
+    "qoderwork": {
+      "integrationInstalled": false,
+      "enabled": false,
+      "permissionsEnabled": false,
+      "notificationHookEnabled": true
     }
   },
-  "dismissedAgentInstallHints": {},
+  "dismissedAgentInstallHints": {
+    "codex": true
+  },
   "dismissedAgentCleanupHints": {},
   "themeOverrides": {},
   "themeVariant": {},
@@ -196,6 +204,17 @@
     "completionOutputMode": "off",
     "r3DirectSendEnabled": false
   },
+  "discordPresence": {
+    "enabled": false,
+    "applicationId": "",
+    "privacyShowProject": false
+  },
+  "feishuApproval": {
+    "enabled": false,
+    "idType": "open_id",
+    "approverId": "",
+    "connectionTimeoutSeconds": 15
+  },
   "tgMigration": {
     "transport": null,
     "nativeVerifiedAt": null,
@@ -204,14 +223,6 @@
       "importedAt": null,
       "importError": null
     }
-  },
-  "hardwareBuddy": {
-    "enabled": false,
-    "backend": "bleak",
-    "address": "",
-    "namePrefix": "Clawstick",
-    "permissionsEnabled": false,
-    "quickCommandsEnabled": false
   },
   "autoUpdateCheck": true,
   "pendingUpdateVersion": "",

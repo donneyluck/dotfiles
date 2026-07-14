@@ -1,10 +1,10 @@
 {
     "editor.fontFamily": "'Fira Code', 'Courier New'",
     "editor.fontWeight": "normal",
-    "editor.fontSize": 16,
+    "editor.fontSize": 13,
     "editor.fontLigatures": true,
     "chat.editor.fontFamily": "'Fira Code', 'Courier New'",
-    "chat.editor.fontSize": 16,
+    "chat.editor.fontSize": 13,
     "chat.editor.fontWeight": "normal",
     "claudeCode.preferredLocation": "panel",
     "git.openRepositoryInParentFolders": "never",
