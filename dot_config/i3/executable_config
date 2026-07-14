@@ -23,9 +23,9 @@ font pango:Diablo Heavy 12
 # ============================================================
 exec --no-startup-id fcitx5 -d
 exec --no-startup-id autotiling
-exec --no-startup-id "xrandr --output Virtual1 --mode 1920x1080"
 exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id picom -b
+exec --no-startup-id sleep 2 && xrandr --output Virtual-1 --mode 1920x1080
 exec --no-startup-id variety &
 
 # ============================================================
@@ -34,7 +34,7 @@ exec --no-startup-id variety &
 bindsym $mod+q         kill
 bindsym $mod+Return    exec --no-startup-id alacritty
 bindsym $mod+t         exec thunar
-bindsym $mod+w         exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7897"
+# bindsym $mod+w         exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7897"
 bindsym $mod+d         exec --no-startup-id ~/.config/rofi/launchers/type-6/launcher.sh
 bindsym $mod+s         exec --no-startup-id ~/.config/rofi/powermenu/type-6/powermenu.sh
 bindsym $mod+p         exec --no-startup-id ~/.config/rofi/applets/bin/screenshot.sh
@@ -58,12 +58,12 @@ bindsym $mod+Tab         workspace back_and_forth
 bindsym $mod+Shift+Tab   move container to workspace back_and_forth
 
 # ============================================================
-# 焦点与窗口移动 (vim 风格)
+# 焦点与窗口移动 (vim 风格) — 已迁移到 herdr
 # ============================================================
-bindsym $mod+h         focus left
-bindsym $mod+j         focus down
-bindsym $mod+k         focus up
-bindsym $mod+l         focus right
+# bindsym $mod+h         focus left
+# bindsym $mod+j         focus down
+# bindsym $mod+k         focus up
+# bindsym $mod+l         focus right
 bindsym $mod+Left      focus left
 bindsym $mod+Down      focus down
 bindsym $mod+Up        focus up

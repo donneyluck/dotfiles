@@ -8,7 +8,7 @@ export EDITOR=vim
 #export HTTP_PROXY='127.0.0.1:7890'
 #export HTTPS_PROXY='127.0.0.1:7890'
 #export ALL_PROXY='socks5://127.0.0.1:7891'
-export TERM=xterm;
+export TERM=xterm-256color;
 
 # Proxy: only set when clash-verge is running (port 7897 listening)
 if test (ss -tlnp | grep ':7897' | wc -l) -gt 0
