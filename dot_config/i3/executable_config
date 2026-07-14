@@ -47,13 +47,13 @@ bindsym $mod+v         split v
 bindsym $mod+x         [urgent=latest] focus
 bindsym $mod+f         fullscreen toggle
 bindsym $mod+Shift+space floating toggle
-bindsym $mod+space     focus mode_toggle
+bindsym $mod+Shift+plus  focus mode_toggle
 bindsym $mod+a         focus parent
 bindsym $mod+Shift+c   reload
 bindsym $mod+Shift+e   exec "i3-nagbar -t warning -m '退出 i3?' -b '确认' 'i3-msg exit'"
 
-bindsym $mod+Shift+minus  move scratchpad
-bindsym $mod+minus        scratchpad show
+bindsym $mod+minus  move scratchpad
+bindsym $mod+plus   scratchpad show
 
 bindsym $mod+Tab         workspace back_and_forth
 bindsym $mod+Shift+Tab   move container to workspace back_and_forth
@@ -143,6 +143,9 @@ assign  [class="(?i)code.*"]   $WS2
 assign  [class="Emacs"]        $WS2
 
 assign  [class="^.*Google-chrome$"]  $WS3
+
+# 飞书 — Chat 工作区
+assign  [class="bytedance-feishu"]  $WS4
 
 assign  [class="Shutter"]              $WS5
 assign  [class="Zathura"]              $WS5
