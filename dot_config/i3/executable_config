@@ -145,7 +145,7 @@ assign  [class="Emacs"]        $WS2
 assign  [class="^.*Google-chrome$"]  $WS3
 
 # 飞书 — Chat 工作区
-assign  [class="bytedance-feishu"]  $WS4
+assign  [class="(?i)bytedance-feishu"]  $WS4
 
 assign  [class="Shutter"]              $WS5
 assign  [class="Zathura"]              $WS5
