@@ -3,7 +3,7 @@
 
 set $mod Mod1
 
-set $WS1 "1:👻 GHOSTTY"
+set $WS1 "1:💀️ Herdr"
 set $WS2 "2:💻 Code"
 set $WS3 "3:  Chrome"
 set $WS4 "4:💬 Chat"
@@ -30,7 +30,7 @@ exec --no-startup-id variety &
 # 快捷键 - 应用启动
 # ============================================================
 bindsym $mod+q         kill
-bindsym $mod+Return    exec --no-startup-id ghostty
+bindsym $mod+Return    exec --no-startup-id kitty
 # bindsym $mod+Return    exec --no-startup-id alacritty
 bindsym $mod+t         exec thunar
 # bindsym $mod+w         exec --no-startup-id google-chrome-stable --proxy-server="127.0.0.1:7897"
@@ -129,7 +129,7 @@ bindsym $mod+Shift+r  mode "resize"
 # 窗口规则 - 自动分配到工作区
 # ============================================================
 # assign  [class="Alacritty" title="^Alacritty$"]   $WS1
-assign  [class="com.mitchellh.ghostty"]            $WS1
+assign  [class="kitty"]            $WS1
 # Clawd on Desk — 浮动+所有工作区显示
 for_window [class="^clawd-on-desk$"] floating enable, sticky enable, border none, move position center
 # for_window  [class="Alacritty" title="✳ Claude Code"]  move to workspace $WS2, focus

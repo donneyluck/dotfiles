@@ -1,7 +1,7 @@
 {
   "version": 12,
-  "x": 62,
-  "y": 241,
+  "x": 23,
+  "y": 201,
   "positionSaved": true,
   "positionThemeId": "clawd",
   "positionVariantId": "default",
@@ -204,17 +204,6 @@
     "completionOutputMode": "off",
     "r3DirectSendEnabled": false
   },
-  "discordPresence": {
-    "enabled": false,
-    "applicationId": "",
-    "privacyShowProject": false
-  },
-  "feishuApproval": {
-    "enabled": false,
-    "idType": "open_id",
-    "approverId": "",
-    "connectionTimeoutSeconds": 15
-  },
   "tgMigration": {
     "transport": null,
     "nativeVerifiedAt": null,
@@ -224,8 +213,16 @@
       "importError": null
     }
   },
+  "hardwareBuddy": {
+    "enabled": false,
+    "backend": "bleak",
+    "address": "",
+    "namePrefix": "Clawstick",
+    "permissionsEnabled": false,
+    "quickCommandsEnabled": false
+  },
   "autoUpdateCheck": true,
-  "pendingUpdateVersion": "",
+  "pendingUpdateVersion": "v0.12.0",
   "dismissedUpdateVersions": {},
   "tutorialSeen": true
 }
