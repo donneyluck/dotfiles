@@ -4,15 +4,13 @@
 set $mod Mod1
 
 set $WS1 "1:👻 GHOSTTY"
-set $WS2 "2: Code"
-set $WS3 "3:  Browser"
-set $WS4 "4: Chat"
-set $WS5 "5: Tool"
-set $WS6 "6: File"
-set $WS7 "7: Obsidian"
-set $WS8 "8: Video"
-set $WS9 "9: Sunflower"
-set $WS0 "0: Game"
+set $WS2 "2:💻 Code"
+set $WS3 "3:  Chrome"
+set $WS4 "4:💬 Chat"
+set $WS5 "5:🔧 Tool"
+set $WS6 "6:🗃️ Files"
+set $WS7 "7:📚 Obsidian"
+set $WS8 "8:📊 Excel"
 
 floating_modifier $mod
 
@@ -90,8 +88,6 @@ bindsym $mod+5  workspace $WS5
 bindsym $mod+6  workspace $WS6
 bindsym $mod+7  workspace $WS7
 bindsym $mod+8  workspace $WS8
-bindsym $mod+9  workspace $WS9
-bindsym $mod+0  workspace $WS0
 
 bindsym $mod+shift+1  move container to workspace $WS1, workspace $WS1
 bindsym $mod+shift+2  move container to workspace $WS2, workspace $WS2
@@ -101,8 +97,6 @@ bindsym $mod+shift+5  move container to workspace $WS5, workspace $WS5
 bindsym $mod+shift+6  move container to workspace $WS6, workspace $WS6
 bindsym $mod+shift+7  move container to workspace $WS7, workspace $WS7
 bindsym $mod+shift+8  move container to workspace $WS8, workspace $WS8
-bindsym $mod+shift+9  move container to workspace $WS9, workspace $WS9
-bindsym $mod+shift+0  move container to workspace $WS0, workspace $WS0
 
 # ============================================================
 # Caps Lock 模式
@@ -148,14 +142,10 @@ assign  [class="^.*Google-chrome$"]  $WS3
 assign  [class="(?i)bytedance-feishu"]  $WS4
 
 assign  [class="Shutter"]              $WS5
-assign  [class="Zathura"]              $WS5
-assign  [class="Calibre"]              $WS5
 assign  [class="^WPS.*$"]              $WS5
 assign  [class="^DesktopEditors$"]     $WS5
 assign  [class="^Postman$"]            $WS5
-assign  [class="^DBeaver Ultimate$"]   $WS5
 assign  [class="^Navicat.*$"]          $WS5
-assign  [class="^RedisInsight-v2$"]    $WS5
 assign  [class="^QuickRedis$"]         $WS5
 assign  [class="^clash-verge$"]          $WS5
 assign  [class="^Cc-switch$"]           $WS5
@@ -163,13 +153,9 @@ assign  [class="^Cc-switch$"]           $WS5
 assign  [class="^.*Nautilus$"]    $WS6
 assign  [class="^.*Thunar$"]      $WS6
 
-assign  [class="netease-cloud-music"]  $WS7
-assign  [class="Lollypop"]             $WS7
-assign  [class="ieaseMusic"]           $WS7
+assign  [class="obsidian"]             $WS7
 
-assign  [class="VirtualBox"]       $WS8
-
-assign  [class="^.*cataclysm.*$"]  $WS0
+assign  [class="pm"]              $WS8
 
 # ============================================================
 # 主题 - 窗口颜色
