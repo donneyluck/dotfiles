@@ -194,15 +194,15 @@ bar {
     separator_symbol         "  "
 
     colors {
-        background         #101010E6
+        background         #101010AA
         statusline         #FFFFFF
         separator          #3399FF
 
-        focused_workspace  #FF0000 #11111100 #FFFFFF
-        active_workspace   #FFFFFF #FFFFFF00 #FFFFFF
-        inactive_workspace #111111 #11111100 #FFFFFF
-        urgent_workspace   #990000 #11111100 #FFFFFF
-        binding_mode       #990000 #99000000 #FFFFFF
+        focused_workspace  #FF0000 #101010AA #FFFFFF
+        active_workspace   #FFFFFF #101010AA #FFFFFF
+        inactive_workspace #111111 #101010AA #FFFFFF
+        urgent_workspace   #990000 #101010AA #FFFFFF
+        binding_mode       #990000 #101010AA #FFFFFF
     }
 }
 
