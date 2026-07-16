@@ -4,3 +4,6 @@ next_workspace = "alt+j"
 previous_workspace = "alt+k"
 next_tab = "alt+l"
 previous_tab = "alt+h"
+
+[ui]
+agent_panel_sort = "spaces"
