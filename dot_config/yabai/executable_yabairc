@@ -54,8 +54,6 @@ yabai -m rule --add app="^kitty$" space=1
 yabai -m rule --add app="^WezTerm$" space=1
 yabai -m rule --add app="^Ghostty$" space=1
 yabai -m rule --add app="^Code$" space=2
-yabai -m rule --add app="^Code - Insiders$" space=2
-yabai -m rule --add app="^Cursor$" space=2
 yabai -m rule --add app="^Google Chrome$" space=3
 yabai -m rule --add app="^Safari$" space=3
 yabai -m rule --add app="^Arc$" space=3
@@ -75,3 +73,4 @@ yabai -m rule --add app="^向日葵$" space=8
 # --- Signals (tell sketchybar when things change) ---
 yabai -m signal --add event=space_changed action="bash $HOME/.config/sketchybar/plugins/workspaces.sh" label="space_change"
 yabai -m signal --add event=window_focused action="sketchybar --trigger window_focused" label="window_focused"
+yabai -m signal --add event=window_created app="^Code$" action="yabai -m space --focus 2"
