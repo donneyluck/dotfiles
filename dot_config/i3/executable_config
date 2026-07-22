@@ -25,8 +25,8 @@ exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id picom -b
 exec --no-startup-id sleep 2 && xrandr --output Virtual-1 --mode 1920x1080
 #exec --no-startup-id variety &
-# 改用 feh 设置壁纸，避免 variety 在 web-greeter 登录后丢失壁纸
-exec --no-startup-id sleep 3 && feh --bg-fill ~/Pictures/wallpapers/'【哲风壁纸】夏天森林-大树仰拍.png'
+# 启动时从壁纸文件夹随机选一张
+exec --no-startup-id sleep 3 && feh --bg-fill --randomize ~/Pictures/wallpapers/*
 
 # ============================================================
 # 快捷键 - 应用启动
