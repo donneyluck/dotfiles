@@ -1,9 +1,14 @@
 onboarding = false
 [keys]
-next_workspace = "alt+j"
-previous_workspace = "alt+k"
-next_tab = "alt+l"
-previous_tab = "alt+h"
+next_workspace = "alt+w"
+next_tab = "alt+e"
 
 [ui]
 agent_panel_sort = "spaces"
+
+show_agent_labels_on_pane_borders = true
+[ui.toast]
+delivery = "herdr"
+
+[experimental]
+pane_history = false
