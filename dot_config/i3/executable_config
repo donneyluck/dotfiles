@@ -27,6 +27,7 @@ exec --no-startup-id sleep 2 && xrandr --output Virtual-1 --mode 1920x1080
 #exec --no-startup-id variety &
 # 启动时从壁纸文件夹随机选一张
 exec --no-startup-id sleep 3 && feh --bg-fill --randomize ~/Pictures/wallpapers/*
+bindsym $mod+shift+p exec --no-startup-id feh --bg-fill --randomize ~/Pictures/wallpapers/*
 
 # ============================================================
 # 快捷键 - 应用启动

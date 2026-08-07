@@ -3,3 +3,6 @@
 	email = donney.luck@gmail.com
 [credential]
 	helper = store
+[http]
+	version = HTTP/1.1
+	postBuffer = 524288000
