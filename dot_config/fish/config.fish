@@ -2,7 +2,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# autojump (path differs: Linux /usr/share, macOS Homebrew /usr/local/share)
 [ -f /usr/share/autojump/autojump.fish ]; and source /usr/share/autojump/autojump.fish
+[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
 export EDITOR=vim
 #export HTTP_PROXY='127.0.0.1:7890'
@@ -11,7 +13,8 @@ export EDITOR=vim
 export TERM=xterm-256color;
 
 # Proxy: only set when clash-verge is running (port 7897 listening)
-if test (ss -tlnp | grep ':7897' | wc -l) -gt 0
+# ss is Linux-only; nc works on both Linux and macOS
+if nc -z 127.0.0.1 7897 >/dev/null 2>&1
     set -x HTTP_PROXY "http://127.0.0.1:7897"
     set -x HTTPS_PROXY "http://127.0.0.1:7897"
     set -x ALL_PROXY "socks5://127.0.0.1:7897"
@@ -82,14 +85,17 @@ function sshlist
     end
 end
 
-function open -d "open directories with thunar"
-   if test (count $argv) -eq 0
-       echo "Usage: open <directory>"
-       return 1
-   end
-   for arg in $argv
-       thunar "$arg" > /dev/null 2>&1 &
-   end
+# macOS has a system `open` command; only define the thunar version on Linux
+if not command -q open
+    function open -d "open directories with thunar"
+       if test (count $argv) -eq 0
+           echo "Usage: open <directory>"
+           return 1
+       end
+       for arg in $argv
+           thunar "$arg" > /dev/null 2>&1 &
+       end
+    end
 end
 
 #function proxy_on -d "open proxy"
@@ -115,7 +121,7 @@ function makescript
 end
 
 function sbs
-  du -b --max-depth 1 | sort -nr | perl -pe 's{([0-9]+)}{sprintf "%.1f%s", $1>=2**30? ($1/2**30, "G"): $1>=2**20? ($1/2**20, "M"): $1>=2**10? ($1/2**10, "K"): ($1, "")}e'
+  du -kd 1 2>/dev/null | sort -nr | awk '{ if ($1 >= 1048576) printf "%.1fG\t%s\n", $1/1048576, $2; else if ($1 >= 1024) printf "%.1fM\t%s\n", $1/1024, $2; else printf "%dK\t%s\n", $1, $2 }'
 end
 
 function mcd -d "mkdir and enter"
@@ -153,7 +159,7 @@ end
 
 function ranger-cd
   set tempfile '/tmp/chosendir'
-  /usr/bin/ranger --choosedir=$tempfile (pwd)
+  ranger --choosedir=$tempfile (pwd)
 
   if test -f $tempfile
       if [ (cat $tempfile) != (pwd) ]
@@ -169,7 +175,7 @@ function fish_user_key_bindings
     bind \co 'ranger-cd ; fish_prompt'
 end
 
-thefuck --alias | source
+type -q thefuck; and thefuck --alias | source
 set -x PATH ~/.local/bin $PATH
 
 # bun

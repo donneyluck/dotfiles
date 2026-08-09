@@ -1,0 +1,19 @@
+[user]
+	name = donneyluck
+	email = donney.luck@gmail.com
+{{ if eq .chezmoi.os "darwin" }}
+# macOS: use gh's git credential helper
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/local/bin/gh auth git-credential
+{{ else }}
+# Linux: plain credential store
+[credential]
+	helper = store
+[http]
+	version = HTTP/1.1
+	postBuffer = 524288000
+{{ end }}

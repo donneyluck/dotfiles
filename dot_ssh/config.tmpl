@@ -28,3 +28,10 @@ Host my-game01
   IdentityFile ~/.ssh/mytail.pem
 Host HK
   HostName 150.109.65.179
+{{ if eq .chezmoi.os "darwin" }}
+# macOS-only hosts
+Host durain-server
+    HostName 47.116.21.80
+    User root
+    IdentityFile ~/.ssh/id_ed25519
+{{ end }}

@@ -1,3 +1,6 @@
+# --cmd is chezmoi command-output data, not a real dotfile
+--cmd
+
 {{ if ne .chezmoi.os "darwin" }}
 # macOS-only configs — skip on non-macOS
 dot_config/yabai/
