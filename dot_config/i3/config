@@ -122,11 +122,9 @@ bindsym $mod+Shift+r  mode "resize"
 # ============================================================
 # 窗口规则 - 自动分配到工作区
 # ============================================================
-# assign  [class="Alacritty" title="^Alacritty$"]   $WS1
 assign  [class="ghostty"]            $WS1
 # Clawd on Desk — 浮动+所有工作区显示
 for_window [class="^clawd-on-desk$"] floating enable, sticky enable, border none
-# for_window  [class="Alacritty" title="✳ Claude Code"]  move to workspace $WS2, focus
 assign  [class="(?i)code.*"]   $WS2
 assign  [class="Emacs"]        $WS2
 
