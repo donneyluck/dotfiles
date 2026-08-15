@@ -1,3 +1,6 @@
+# Homebrew on PATH for SSH sessions (sshd PATH is minimal; fish doesn't run path_helper)
+fish_add_path /usr/local/bin
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
