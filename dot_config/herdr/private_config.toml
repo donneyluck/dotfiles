@@ -1,7 +1,9 @@
 onboarding = false
 [keys]
-next_workspace = "alt+w"
-next_tab = "alt+e"
+previous_workspace = "alt+up"
+next_workspace = "alt+down"
+previous_tab = "alt+left"
+next_tab = "alt+right"
 
 [ui]
 agent_panel_sort = "spaces"
